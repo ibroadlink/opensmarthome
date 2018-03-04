@@ -1,6 +1,7 @@
 
 ## SDK接口参考
 <span style="color:#ccc">1.1</span> 对象定义
+
 Go to [对象定义](object-definition.md).
 
 <span style="color:#ccc">1.2</span> SDK集成方法
