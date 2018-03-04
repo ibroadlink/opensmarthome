@@ -1,4 +1,3 @@
-# opensmarthome
 # 概述
 APP中集成iot SDK，云端与开放设备控制接口对接。对接的流程框图如下所示：
 
@@ -33,19 +32,22 @@ APP通过局域网获取到设备的信息以及KEY后，必须通过云端进�
 
 对于支持设备上报的产品，当设备有状态变化时，可以通过云端接口推送出来。
 
-<span style="color:#ccc">0.7</span> 安全和隐私
+<span style="color:#ccc">0.8</span> 安全和隐私
+  * 报文加密
 
-* 报文加密
+    报文使用AES 128位进行加密，密钥在设备配对时产生，每次复位都会变化
 
-  报文使用AES 128位进行加密，密钥在设备配对时产生，每次复位都会变化
+  * 接口安全
 
-* 接口安全
+    云端接口使用HTTPS，TLS 1.2.
 
-  云端接口使用HTTPS，TLS 1.2.
+  * 数据隐私
 
-* 数据隐私
+    iot 云端不保存任何数据，所有控制以来的数据都来自于app。每次控制时，需要携带设备的控制key。
 
-  iot 云端不保存任何数据，所有控制以来的数据都来自于app。每次控制时，需要携带设备的控制key。
+<span style="color:#ccc">0.9</span> 注意事项
+  * 第三方云端需要保存devicePairedInfo
+  * 第三方云端需要知道每个devicePairedInfo对应的endpoint列表以及每个endpoint支持的功能
 
   ## SDK接口参考
   Go to [集成SDK](sdk-integrations.md).
