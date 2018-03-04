@@ -290,7 +290,7 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
     }
   }
 ```
-<span style="color:#ccc">2.3.1</span> 错误码表
+<span style="color:#ccc">2.3.2</span> 错误码表
 
 |字段 | 说明 | 备注|
 |------------ | ------------- | -------------|
