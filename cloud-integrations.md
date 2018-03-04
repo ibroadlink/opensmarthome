@@ -307,3 +307,6 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 |UNDERSTAND_FAILURE	|无法理解	 |
 |SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
 
+
+<span style="color:#ccc">3</span> 控制接口参考表
+Go to [控制接口参考表](message_table.md).
