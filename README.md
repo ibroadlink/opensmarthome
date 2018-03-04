@@ -1,5 +1,6 @@
 # 概述
 APP中集成iot SDK，云端与开放设备控制接口对接。对接的流程框图如下所示：
+![整体框图](arch.png "整体框图")
 
 <span style="color:#ccc">0.1</span> 配置设备上网
 
