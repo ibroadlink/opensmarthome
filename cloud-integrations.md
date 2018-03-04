@@ -1,9 +1,9 @@
 ## 云端接口参考
-<span style="color:#ccc">2.1</span> 接口校验和安全方式方式
+<span style="color:#ccc">1</span> 接口校验和安全方式方式
 
-<span style="color:#ccc">2.2</span> 云端接口
+<span style="color:#ccc">2</span> 云端接口
 
-<span style="color:#ccc">2.2.1</span> 设备注册接口
+<span style="color:#ccc">2.1</span> 设备注册接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
 
@@ -90,7 +90,7 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
 }
 
 ```
-<span style="color:#ccc">2.2.2</span> 设备控制接口
+<span style="color:#ccc">2.2</span> 设备控制接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
@@ -144,7 +144,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.2.3</span> 设备在线状态查询接口
+<span style="color:#ccc">2.3</span> 设备在线状态查询接口
 
 每次最多查询32个设备的在线状态
 ```
@@ -193,7 +193,7 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.2.4</span> 设备状态查询接口
+<span style="color:#ccc">2.4</span> 设备状态查询接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
@@ -253,15 +253,15 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.2.5</span> 数据上报接口
+<span style="color:#ccc">2.5</span> 数据上报接口
 ```
 POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 
 ```
 
-<span style="color:#ccc">2.3</span> 接口错误响应
+<span style="color:#ccc">2.6</span> 接口错误响应
 
-<span style="color:#ccc">2.3.1</span> 错误响应格式
+<span style="color:#ccc">2.6.1</span> 错误响应格式
 
 ```
 返回消息中 
@@ -290,7 +290,7 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
     }
   }
 ```
-<span style="color:#ccc">2.3.2</span> 错误码表
+<span style="color:#ccc">2.6.2</span> 错误码表
 
 |字段 | 说明 | 备注|
 |------------ | ------------- | -------------|
