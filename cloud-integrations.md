@@ -19,8 +19,6 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
                 "deviceInfo": deviceInfo,
             },
             "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
             },
             "options": {
             }
@@ -39,6 +37,9 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
             "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "payload": {
+          "device": {
+              "deviceInfo": deviceInfo,
+          },
         },
         "endpoints": [
             {
@@ -101,8 +102,6 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
     },
     "endpoint": {
       "scope": {
-         "type": "BearerToken",
-         "token": "Yodst_WQRoS6LHyNyMLSZA"
       },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
@@ -145,4 +144,59 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 
 <span style="color:#ccc">2.1</span> 设备状态查询接口
 
+每次最多查询32个设备的在线状态
+```
+POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.QueryState",
+       "name": "QueryState",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": [{
+      "scope": {
+         "type": "BearerToken",
+         "token": "Yodst_WQRoS6LHyNyMLSZA"
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    }],
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+    "properties": []
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.QueryState",
+       "name": "Response",
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": [{
+      "scope": {
+        "type": "BearerToken",
+        "token": "some-access-token"
+      },
+      "endpointId": "appliance-001",
+      "state": "online"
+    }],
+    "payload": {
+    }
+  }
+}
+```
+
 <span style="color:#ccc">2.1</span> 数据上报接口
+```
+POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
+
+```
