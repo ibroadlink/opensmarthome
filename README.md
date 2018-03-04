@@ -49,6 +49,7 @@ APP通过局域网获取到设备的信息以及KEY后，必须通过云端进�
 <span style="color:#ccc">0.9</span> 注意事项
   * 第三方云端需要保存devicePairedInfo
   * 第三方云端需要知道每个devicePairedInfo对应的endpoint列表以及每个endpoint支持的功能
+  Go to [对象定义](object-definition.md).
 
   ## SDK接口参考
   Go to [集成SDK](sdk-integrations.md).
