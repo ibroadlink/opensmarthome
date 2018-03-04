@@ -142,7 +142,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.1</span> 设备状态查询接口
+<span style="color:#ccc">2.1</span> 设备在线状态查询接口
 
 每次最多查询32个设备的在线状态
 ```
@@ -156,10 +156,8 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "interfaceVersion": "2",
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
-    "endpoint": [{
+    "endpoints": [{
       "scope": {
-         "type": "BearerToken",
-         "token": "Yodst_WQRoS6LHyNyMLSZA"
       },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
@@ -181,14 +179,72 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "interfaceVersion": "2",
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
-    "endpoint": [{
+    "endpoints": [{
       "scope": {
-        "type": "BearerToken",
-        "token": "some-access-token"
       },
       "endpointId": "appliance-001",
       "state": "online"
     }],
+    "payload": {
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.1</span> 设备状态查询接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA",
+       "name": "ReportState",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+"properties": [
+        {
+           "namespace": "DNA",
+           "name": "powerState",
+           "value":{
+                "value":"ON",
+                "scale":"",
+                "attributeName":"开关"
+                "scaleName":"",
+                "valueName":"打开"
+           },
+           "timeOfSample": "2017-02-03T16:20:50.52Z",
+        }
+    ]
+
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.QueryState",
+       "name": "Response",
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "scope": {
+      },
+      "endpointId": "appliance-001",
+    },
     "payload": {
     }
   }
