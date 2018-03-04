@@ -1,0 +1,21 @@
+# 对象定义
+```
+deviceInfo
+{
+     "did":"",
+     "pid":"",
+     "parentID":"",
+     "mac":"",
+     "name":"",
+     "cookie":""
+}
+```
+```
+devicePairedInfo
+{
+     "did":"",
+     "pid":"",
+     "mac":"",
+     "cookie":""
+}
+```
