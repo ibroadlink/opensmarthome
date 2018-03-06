@@ -4,12 +4,14 @@ deviceInfo
 {
      "did":"",
      "pid":"",
-     "parentID":"",
      "mac":"",
      "name":"",
-     "cookie":""
+     "lanaddr":"",
+     "extend":""
 }
 ```
+
+
 ```
 devicePairedInfo
 {
@@ -19,6 +21,19 @@ devicePairedInfo
      "cookie":""
 }
 ```
+
+
+```
+
+APInfo
+{
+    "ssid":"xxxx",
+    "password":"xxxxx",
+    "type": 0/1/2/3             // 加密方式 0:无加密 1:WEP 2:WPA1 3:WPA2
+}
+
+```
+
 
 ```
 endpoint

@@ -16,7 +16,8 @@ public String sdkInit(String params);
 
 params: {
             "loglevel": 0,                  // SDK日志打印级别
-            "license": "xxxxxxxxxxxxx"      // 申请的License
+            "license": "xxxxxxxxxxxxx",      // 申请的License
+            "packageName": "cn.com.broadlink.SDKDemo"       //申请License时的应用包名
         }
 
 return: {
