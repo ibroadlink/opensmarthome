@@ -32,7 +32,7 @@ ChangePowerState请求
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-		 		  "devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -98,7 +98,7 @@ ChangePowerState请求
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -159,7 +159,7 @@ ChangePowerState请求
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -223,7 +223,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -401,6 +401,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -428,6 +429,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -454,6 +456,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -480,6 +483,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -506,6 +510,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -532,6 +537,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -558,6 +564,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -616,7 +623,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -678,7 +685,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -746,6 +753,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -773,6 +781,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -799,6 +808,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -826,6 +836,7 @@ ChangePowerState请求
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -887,7 +898,7 @@ ChangePowerState请求
                     "token": "some-access-token"
                 },
                 "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
                 "cookie": {}
             },
             "payload": {
@@ -961,7 +972,7 @@ ChangePowerState请求
                     "token": "some-access-token"
                 },
                 "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
                 "cookie": {}
             },
             "payload": {
@@ -1028,7 +1039,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1097,7 +1108,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1160,7 +1171,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1228,7 +1239,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1296,7 +1307,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1365,7 +1376,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1435,7 +1446,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1497,7 +1508,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1560,7 +1571,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1629,7 +1640,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1701,7 +1712,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1773,7 +1784,7 @@ ChangePowerState请求
             "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1836,7 +1847,7 @@ ChangePowerState请求
             },
             "endpoint": {
               "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
               "cookie": {},
               "scope":{ 
                     "type":"",
@@ -2058,7 +2069,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2113,7 +2124,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-"devicePairedInfo":devicePairedInfo,
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2176,6 +2187,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2203,6 +2215,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2229,6 +2242,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2839,6 +2853,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2866,6 +2881,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2892,6 +2908,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2918,6 +2935,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2944,6 +2962,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2970,6 +2989,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2996,6 +3016,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3182,6 +3203,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3209,6 +3231,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3235,6 +3258,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3262,6 +3286,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4595,6 +4620,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4622,6 +4648,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4648,6 +4675,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             "token": "<OAuth2认证后得到的access_token>"
           },
           "endpointId": "<设备ID，发现时返回>",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4777,6 +4805,8 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
              "type": "BearerToken",
              "token": "some-access-token"
           },
+		  "endpointId": "appliance-001",
+		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
