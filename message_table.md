@@ -1944,7 +1944,8 @@ valueName                        值名称
                 "type": "",
                 "token": "some-access-token"
               },
-              "endpointId": "appliance-001"
+              "endpointId": "appliance-001",
+			  "devicePairedInfo":{"did":"","pid":""},
             },
             "payload": {
               "reportType":"STATE_CHANGE",
