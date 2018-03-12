@@ -55,7 +55,7 @@
 
     >   动作(name)         属性(payload) 取值   范围
     >   ------------------ -------------------- -----------
-    >   ChangePowerState   powerState           "ON"|"OFF
+    >   ChangePowerState   powerState           "ON"|"OFF"
     >
 频道控制
 :   namespace: DNA.ChannelControl
@@ -133,7 +133,7 @@
 >
 > >   动作(name)         属性(payload) 取值   范围
 > >   ------------------ -------------------- -----------
-> >   ChangePowerState   powerState           "ON"|"OFF
+> >   ChangePowerState   powerState           "ON"|"OFF"
 > >
 颜色控制（按HSL）
 :   namespace: DNA.ColorControl
@@ -157,8 +157,9 @@
 >
 > >   动作(name)         属性(payload) 取值   范围
 > >   ------------------ -------------------- -----------
-> >   ChangePowerState   powerState           "ON"|"OFF
+> >   ChangePowerState   powerState           "ON"|"OFF"
 > >
+
 风速控制
 
 > namespace: DNA.WindSpeedControl
@@ -168,6 +169,7 @@
 > >   SetWindSpeed      windSpeed            
 > >   AdjustWindSpeed   windSpeedSteps       
 > >
+
 风向控制
 
 > namespace: DNA.AirFlowControl
@@ -187,8 +189,8 @@
 >
 > >   动作(name)         属性(payload) 取值   范围
 > >   ------------------ -------------------- -----------
-> >   ChangePowerState   powerState           "ON"|"OFF
-> >
+> >   ChangePowerState   powerState           "ON"|"OFF"
+
 运动控制
 
 > namespace: DNA.MotionControl
@@ -215,6 +217,6 @@
 >
 > >   动作(name)         属性(payload) 取值   范围
 > >   ------------------ -------------------- -----------
-> >   ChangePowerState   powerState           "ON"|"OFF
+> >   ChangePowerState   powerState           "ON"|"OFF"
 > >
 
