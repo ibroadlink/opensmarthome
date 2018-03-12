@@ -1,8 +1,3 @@
-智能家居接口V2.0-品类参考表
-===========================
-
-2017/10/27 增加浇花器品类。
-
 品类参考表
 ----------
 
@@ -204,7 +199,15 @@
 > >   Stop         无                   
 > >   Start                             
 > >
--   其他
+
+在离线状态
+
+> namespace: DNA.EndpointHealth
+>
+> >   动作(name)   属性(payload) 取值   范围
+> >   ------------ -------------------- ------
+> >   无        connectivity            OK/UNREACHABLE                   
+    
 
 目前只支持电源控制
 
@@ -214,13 +217,4 @@
 > >   ------------------ -------------------- -----------
 > >   ChangePowerState   powerState           "ON"|"OFF
 > >
-详细参考表
-----------
 
-[智能家居消息参考表](message_table.html#section)
-
-[智能家居接口属性参考表](attribute_table.html#section)
-
-[接口错误消息参考表](error_table.html#section)
-
-[接口参考表](smarthome_api.html#section)
