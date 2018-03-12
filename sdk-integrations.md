@@ -4,9 +4,50 @@
 
 Go to [对象定义](object-definition.md).
 
-<span style="color:#ccc">1.2</span> SDK集成方法
+<span style="color:#ccc">1.2</span> 准备工作
 
-<span style="color:#ccc">1.3</span> 支持的配置方式
+#### 获取 kit 模块
+
+如果你还没有 BroadLink DNA kit 模块，请联系我们咨询如何获取模块。
+
+#### 建立产品测试与发布
+
+如果你还没有建立一个产品，请登录我们的开发者平台注册账号，进行产品的建立，测试与发布。
+
+#### 申请 License
+
+为了设备的安全，所有使用 SDK 的用户必须向 `BroadLink Co., Ltd.` 申请 `License`，`License` 与应用的包名(`packageName`)相关联，不同的应用包名需要申请不同的 `License`。
+
+1.  进入 `BroadLink DNA kit` 开发者平台。
+2.  登录账号，没有账号请先注册。
+3.  选择 `我的 SDK`。
+4.  选择 `License 申请` -> `新建 License 申请`，按要求填写信息，若要控制第三方厂家设备，请在备注中说明厂家名称以及具体产品型号，提交审核。
+5.  审核通过之后，可以在申请页面看见 `License`。
+
+<span style="color:#ccc">1.3</span> SDK集成方法
+
+#### Android 集成
+
+将SDK压缩包内的JAR文件和so文件导入到工程中，SDK 支持 `Android2.3.1` 以后版本,支持 `armeabi/armeabi-v7a/arm64-v8a/mips/mips64/x86_64/x86` 指令集。
+
+Android 平台使用 `NetworkAPI.getInstanceBLNetwork(Content content)` 进行 SDK 实例化，SDK 为单例模式。
+在使用 SDK 时，应用需要如下权限:
+
+```
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+```
+
+#### iOS 集成
+
+SDK 支持 `iOS6.0` 以后版本, 支持 `armv7/armv7s/arm64/i386/x86_64` 指令集。
+
+iOS 平台使用 `[[NetworkAPI alloc] init]` 进行 SDK 实例化，SDK 为单例模式。
 
 <span style="color:#ccc">1.4</span> SDK初始化
 
@@ -15,9 +56,9 @@ Go to [对象定义](object-definition.md).
 public String sdkInit(String params);
 
 params: {
-            "loglevel": 0,                  // SDK日志打印级别
-            "license": "xxxxxxxxxxxxx",      // 申请的License
-            "packageName": "cn.com.broadlink.SDKDemo"       //申请License时的应用包名
+            "loglevel": 0,                                  // SDK日志打印级别
+            "license": "xxxxxxxxxxxxx",                     // 申请的License
+            "packageName": "cn.com.broadlink.SDKDemo"       // 申请License时的应用包名
         }
 
 return: {
