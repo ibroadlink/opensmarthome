@@ -312,4 +312,4 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 Go to [控制接口参考表](message_table.md).
 
 <span style="color:#ccc">4</span> 接口属性参考表
-Go to [接口属性参考表](_table.md).
+Go to [接口属性参考表](attribute_table.md).
