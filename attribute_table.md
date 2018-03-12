@@ -246,4 +246,16 @@ windSpeed目前支持： "AUTO", "LOW", "HIGH", "MEDIUM"
 >
 windSpeedSteps目前支持：正数和负数，正整表示增加，负整数表示减少
 
+### 设备在线状态
+
+> 名称: connectivity
+>
+> 有效值: OK,UNREACHABLE
+>
+> 对应的动作：无
+>
+> 示例：
+>
+
+
 
