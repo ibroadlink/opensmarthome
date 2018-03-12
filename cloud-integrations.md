@@ -313,3 +313,9 @@ Go to [控制接口参考表](message_table.md).
 
 <span style="color:#ccc">4</span> 接口属性参考表
 Go to [接口属性参考表](attribute_table.md).
+
+<span style="color:#ccc">5</span> 品类参考表
+Go to [品类参考表](category_table.md).
+
+
+
