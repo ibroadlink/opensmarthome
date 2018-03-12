@@ -1694,10 +1694,7 @@ ChangePowerState请求
     接口名称：DNA.HumiditySensor
 
     请求
-    ```
-   
-   
-
+```
     {
       "directive": {
         "header": {
@@ -1718,10 +1715,10 @@ ChangePowerState请求
         "payload": {}
       }
     }
-    ```
+```
 
     响应
-    ```
+```
    
 
         {
@@ -1766,7 +1763,7 @@ ChangePowerState请求
     接口名称：DNA.PM2_5Sensor
 
     请求
-    ```
+```
    
    
 
@@ -1793,7 +1790,7 @@ ChangePowerState请求
 ```
 
     响应
-    ```
+```
    
 
         {
@@ -1897,7 +1894,7 @@ ChangePowerState请求
             }
           }
         }
-   ```     
+```     
         
 状态查询响应时，每个属性都会携带如下字段：
 
@@ -1911,6 +1908,8 @@ valueName                        值名称
 如果是查询一个endpoint的全部状态, namespace需要填DNA.
 
 如果是查询单个属性，则填如对应属性的接口名称。
+
+
 
 <span style="color:#ccc">3.17</span>变化通知
 
