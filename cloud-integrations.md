@@ -45,10 +45,9 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
         },
         "endpoints": [
             {
-                "endpointId": "appliance-001",
-                "friendlyName": "卧室灯",
-                "isReachable":true,
-                "description": "由BroadLink生产的灯",
+                "endpointId": "appliance-001"，//设备的,一般为sdk设备发现的did
+                "friendlyName": "卧室灯",//设备的默认名称
+                "description": "由BroadLink生产的灯",
                 "manufacturerName": "Sample Manufacturer",
                 "icon":"产品图片URL",
                 "brand":"品牌",
@@ -97,28 +96,28 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 {
   "directive": {
     "header": {
-       "namespace": "DNA.PowerControl",
-       "name": "ChangePowerState",
-       "interfaceVersion": "2",
-       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
-    },
+       "namespace": "DNA.PowerControl",//控制能力
+       "name": "ChangePowerState",//控制动作
+       "interfaceVersion": "2",//目前版本标识
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"//请求id,返回信息中会保持一致。
+    },
     "endpoint": {
       "scope": {
       },
-      ”devicePairedInfo":devicePairedInfo,
-      "endpointId": "Some-Device-ID",
-      "cookie": {}
-    },
+      ”devicePairedInfo":devicePairedInfo,//sdk设备配对
+      "endpointId": "Some-Device-ID",//注册返回
+      "cookie": {}//目前未在使用，方便将来扩展
+    },
     "payload": {
-        "powerState":"OFF"
-    }
+        "powerState":"OFF"//控制属性和属性值
+    }
   }
 }
 响应：
 {
-  "context": {
-    "properties": [ {
-       "namespace": "DNA.PowerControl",
+  "context": {//控制参数
+    "properties": [ {
+       "namespace": "DNA.PowerControl",
        "name": "powerState",
        "value": “ON”,
        "timeOfSample": "2017-02-03T16:20:50.52Z",
@@ -127,17 +126,15 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
   "event": {
     "header": {
        "namespace": "DNA.PowerControl",
-       "name": "Response",
-       "interfaceVersion": "2",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
       "scope": {
-        "type": "BearerToken",
-        "token": "some-access-token"
       },
-      "endpointId": "appliance-001"
-    },
+      "endpointId": "appliance-001"//控制设备
+    },
     "payload": {
     }
   }
