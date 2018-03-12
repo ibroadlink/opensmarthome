@@ -1,5 +1,4 @@
-智能家居接口V2.0-接口属性参考表
-===============================
+
 
 接口属性参考表
 --------------
@@ -247,13 +246,4 @@ windSpeed目前支持： "AUTO", "LOW", "HIGH", "MEDIUM"
 >
 windSpeedSteps目前支持：正数和负数，正整表示增加，负整数表示减少
 
-其他参考表
-----------
 
-[智能家居消息参考表](message_table.html#section)
-
-[智能家居接口属性参考表](attribute_table.html#section)
-
-[接口错误消息参考表](error_table.html#section)
-
-[接口参考表](smarthome_api.html#section)
