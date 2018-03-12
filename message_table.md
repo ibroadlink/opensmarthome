@@ -1961,6 +1961,13 @@ valueName                        值名称
                     "timeOfSample": "2017-02-03T16:20:50.52Z",
                     "uncertaintyInMilliseconds": 0
                   },
+		  {
+                    "namespace": "DNA.EndpointHealth",
+                    "name": "connectivity",
+                    "value": "OK",
+                    "timeOfSample": "2017-02-03T16:20:50.52Z",
+                    "uncertaintyInMilliseconds": 0
+                  },
                   {
                     "namespace": "DNA.PercentageControl",
                     "name": "percentage",
