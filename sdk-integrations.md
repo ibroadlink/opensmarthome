@@ -213,6 +213,7 @@ params:
                         "pid":"",                   // 设备类型
                         "ircodeid":"",              // 红外码ID
                         "ircode": {
+                            "name": "打开空调",                                  //本条红外码功能名称
                             "function":"on",                                    //本条红外码功能
                             "desc":"xxx",                                       //本条红外码描述信息
                             "code":"2600121343241325243521342342141"            //红外码值
@@ -230,3 +231,22 @@ return:
 
 ```
 
+```
+public String deviceControl(String action, String params)
+
+action: dev_passthrough
+params:
+            {
+                    "devicePairedInfo": devicePairedInfo    // 配置成功上的设备信息
+                    "command": "xxxxxx"         // 透传指令，BASE64 EnCode
+                    "version": 1                // 配对版本
+            }
+
+return:
+            {
+                    "status":0,
+                    "msg": "success", 
+                    "command": "xxxxxxxxx"    // 透传返回指令，BASE64 EnCode
+            }
+
+```
