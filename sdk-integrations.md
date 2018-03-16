@@ -195,7 +195,38 @@ params:
 return:
             {
                     "status":0,
+                    "msg": "success", 
                     "devicePairedInfo": devicePairedInfo //配置成功上的设备信息
             }
 
 ```
+
+<span style="color:#ccc">1.9</span> 设备控制API
+```
+public String deviceControl(String action, String params)
+
+action: RM_Panel_Test
+params:
+            {
+                    "devicePairedInfo": devicePairedInfo    // 配置成功上的设备信息
+                    "data" : {                      //  云端返回信息
+                        "pid":"",                   // 设备类型
+                        "ircodeid":"",              // 红外码ID
+                        "ircode": {
+                            "function":"on",                                    //本条红外码功能
+                            "desc":"xxx",                                       //本条红外码描述信息
+                            "code":"2600121343241325243521342342141"            //红外码值
+                        }
+                    }
+                    "version": 1                // 配对版本
+            }
+
+return:
+            {
+                    "status":0,
+                    "msg": "success", 
+                    "devicePairedInfo": devicePairedInfo    // 新返回创建的设备信息
+            }
+
+```
+
