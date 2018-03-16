@@ -47,6 +47,7 @@ params:
                         "ircodeid":"",              // 红外码ID
                         "ircode": {
                             "function":"on",                                    //本条红外码功能
+                            "name":"空调打开"，　　　　　　　　　　　　　　　　　　　　　//功能名称
                             "desc":"xxx",                                       //本条红外码描述信息
                             "code":"2600121343241325243521342342141"            //红外码值
                         }
@@ -65,18 +66,243 @@ return:
 
 # 云端具体接口参考
 1. 获取品类列表
-  * TODO
+
+```
+URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+
+header: 
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "getdevtype",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "endpoint": {
+                "scope": {
+                    "type": "",
+                    "token": "some-access-token"
+                },
+                "endpointId": "appliance-001",//暂时不需要
+                "devicePairedInfo": devicePairedInfo,
+                "cookie": {}
+            }，
+            "payload": {
+            }
+        }
+    }
+                    
+return:
+   {
+      "context": {
+      },
+      "event": {
+        "header": {
+           "namespace": "DNA.IrcodeInfo",
+           "name": "Response",
+           "interfaceVersion": "2",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+        },
+        "endpoint": {
+          "scope": {
+            "type": "",
+            "token": "some-access-token"
+          },
+          "endpointId": "appliance-001"
+        },
+        "payload": {
+            "devtype": [{"devtypeid":int,"devtypename":string}]
+        }
+      }
+    }
+```
 
 2. 获取品牌列表
-  * TODO
 
-3. 获取红码列表
-  * TODO，需要是一个JSON格式，指明红码是打开还是关闭，具体的描述信息，供UI提示用，同时提供红码连接，可以给RM4类型的产品使用
+```
+URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+
+header: 
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "getbrand",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "endpoint": {
+                "scope": {
+                    "type": "",
+                    "token": "some-access-token"
+                },
+                "endpointId": "appliance-001",//暂时不需要
+                "devicePairedInfo": devicePairedInfo,
+                "cookie": {}
+            },
+            "payload": {
+                "devtypeid":0
+            }
+        }
+    }
+                    
+return:
+   {
+      "context": {
+      },
+      "event": {
+        "header": {
+           "namespace": "DNA.IrcodeInfo",
+           "name": "Response",
+           "interfaceVersion": "2",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+        },
+        "endpoint": {
+          "scope": {
+            "type": "",
+            "token": "some-access-token"
+          },
+          "endpointId": "appliance-001"
+        },
+        "payload": {
+            "brand": [{"brandid":int,"brand":string,"enbrand":string,"famousstatus":int}]
+        }
+      }
+    }
+```
+
+3. 获取型号列表（目前只有云电机有型号）
+
+```
+URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+
+header: 
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "getversion",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "endpoint": {
+                "scope": {
+                    "type": "",
+                    "token": "some-access-token"
+                },
+                "endpointId": "appliance-001",//暂时不需要
+                "devicePairedInfo": devicePairedInfo,
+                "cookie": {}
+            },
+            "payload": {
+                "devtypeid":0，
+                "brandid":1
+            }
+        }
+    }
+                    
+return:
+   {
+      "context": {
+      },
+      "event": {
+        "header": {
+           "namespace": "DNA.IrcodeInfo",
+           "name": "Response",
+           "interfaceVersion": "2",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+        },
+        "endpoint": {
+          "scope": {
+            "type": "",
+            "token": "some-access-token"
+          },
+          "endpointId": "appliance-001"
+        },
+        "payload": {
+            "version": [{"versionid":0,"version":"","devtypeid":0,brandid:0}]
+        }
+      }
+    }
+```
+
+
+4. 获取红码列表
+
+```
+URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+
+header: 
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "getircode",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "endpoint": {
+                "scope": {
+                    "type": "",
+                    "token": "some-access-token"
+                },
+                "endpointId": "appliance-001",//暂时不需要
+                "devicePairedInfo": devicePairedInfo,
+                "cookie": {}
+            },
+            "payload": {
+                "devtypeid":0，
+                "brandid":1,
+                "versionid":0//(可选)
+            }
+        }
+    }
+                    
+return:
+   {
+      "context": {
+      },
+      "event": {
+        "header": {
+           "namespace": "DNA.IrcodeInfo",
+           "name": "Response",
+           "interfaceVersion": "2",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+        },
+        "endpoint": {
+          "scope": {
+            "type": "",
+            "token": "some-access-token"
+          },
+          "endpointId": "appliance-001"
+        },
+        "payload": {
+            "ircode":[ 
+                "pid":"",                   // 设备类型
+                "ircodeid":"",              // 红外码ID
+                "ircode": {
+                    "function":"on",                                    //本条红外码功能
+                    "name":"空调打开"　　　　　　　　　　　　　　　　　　　　　　//功能名称
+                    "desc":"空调打开，模式制热,23摄氏度，自动风",            //本条红外码描述信息
+                    "code":"2600121343241325243521342342141"            //红外码值
+                }
+                ]
+        }
+      }
+    }
+```
 
 # 品类以及对应功能参考表
 0. JSON格式
 1. 空调
-  * TODO
 2. 电视
-3. 风扇
-4. 灯
+3. 机顶盒
+4. 风扇
+5. 灯
+
+具体参看：  Go to [集成云端API](category_table.md).
