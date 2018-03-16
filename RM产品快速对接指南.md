@@ -305,4 +305,4 @@ return:
 4. 风扇
 5. 灯
 
-具体参看：  Go to [集成云端API](category_table.md).
+具体参看：  Go to [品类参考表](category_table.md).

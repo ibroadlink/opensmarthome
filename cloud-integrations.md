@@ -305,6 +305,59 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 |SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
 
 
+<span style="color:#ccc">2.７</span> 透传指令控制接口(预发布)
+```
+POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.TransmissionControl",
+       "name": "commonControl",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+        "data":"b445sdfafad112224sdf"
+    }
+  }
+}
+响应：
+{
+  "context": {//控制参数
+    "properties": [ {
+       "namespace": "DNA.TransmissionControl",
+       "name": "commonControl",
+       "value": "b445sdfafad112224sdf",
+       "timeOfSample": "2017-02-03T16:20:50.52Z",
+    } ]
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.TransmissionControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "scope": {
+      },
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+
 <span style="color:#ccc">3</span> 控制接口参考表
 Go to [控制接口参考表](message_table.md).
 
