@@ -335,7 +335,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
     "properties": [ {
        "namespace": "DNA.TransmissionControl",
        "name": "commonControl",
-       "value": "b445sdfafad112224sdf",
+       "value": "b445sdfafad112224sdf",//控制指令
        "timeOfSample": "2017-02-03T16:20:50.52Z",
     } ]
   },
@@ -352,6 +352,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
       "endpointId": "appliance-001"//控制设备
     },
     "payload": {
+	"data":"b445sdfafad112224sdfsdfad"//设备返回数据
     }
   }
 }
