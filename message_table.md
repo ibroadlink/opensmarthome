@@ -32,7 +32,7 @@ ChangePowerState请求
              "token": "some-access-token"
           },
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+		      "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
