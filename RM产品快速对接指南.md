@@ -285,6 +285,7 @@ return:
             "ircode":[ 
                 "pid":"",                   // 设备类型
                 "ircodeid":"",              // 红外码ID
+                "timestamp":1514736000000   //timestamp
                 "ircode": {
                     "function":"on",                                    //本条红外码功能
                     "name":"空调打开"　　　　　　　　　　　　　　　　　　　　　　//功能名称
