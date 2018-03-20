@@ -68,7 +68,7 @@ return:
 1. 获取品类列表
 
 ```
-URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
 
 header: 
 body:
@@ -88,7 +88,7 @@ body:
                 "endpointId": "appliance-001",//暂时不需要
                 "devicePairedInfo": devicePairedInfo,
                 "cookie": {}
-            }，
+            },
             "payload": {
             }
         }
@@ -122,7 +122,7 @@ return:
 2. 获取品牌列表
 
 ```
-URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
 
 header: 
 body:
@@ -177,7 +177,7 @@ return:
 3. 获取型号列表（目前只有云电机有型号）
 
 ```
-URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
 
 header: 
 body:
@@ -234,7 +234,7 @@ return:
 4. 获取红码列表
 
 ```
-URL: https://xxxbizopenplatform.ibroadlink.com/ircode/info
+URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
 
 header: 
 body:
