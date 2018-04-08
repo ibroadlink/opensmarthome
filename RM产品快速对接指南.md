@@ -281,18 +281,17 @@ return:
           },
           "endpointId": "appliance-001"
         },
-        "payload": {
-            "ircode":[ 
-                "pid":"",                   // 设备类型
-                "ircodeid":"",              // 红外码ID
-                "timestamp":1514736000000   //timestamp
+        "payload":{
+            "ircode":[{
+                "pid":"",                 
+                "ircodeid":"",
+                "timestamp":1514736000000, 
                 "ircode": {
-                    "function":"on",                                    //本条红外码功能
-                    "name":"空调打开"　　　　　　　　　　　　　　　　　　　　　　//功能名称
-                    "desc":"空调打开，模式制热,23摄氏度，自动风",            //本条红外码描述信息
-                    "code":"2600121343241325243521342342141"            //红外码值
-                }
-                ]
+                    "function":"on",          
+                    "name":"空调打开",
+                    "desc":"空调打开，模式制热,23摄氏度，自动风",     
+                    "code":"2600121343241325243521342342141"   
+                }}]
         }
       }
     }
