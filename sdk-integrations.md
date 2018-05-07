@@ -212,7 +212,8 @@ params:
                     "data" : {                      //  云端返回信息
                         "pid":"",                   // 设备类型
                         "ircodeid":"",              // 红外码ID
-                        "ircode": {
+                        "timestamp":1514736000000,  // 云端返回测试时间戳
+                        "ircode": {
                             "name": "打开空调",                                  //本条红外码功能名称
                             "function":"on",                                    //本条红外码功能
                             "desc":"xxx",                                       //本条红外码描述信息
