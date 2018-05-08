@@ -265,37 +265,43 @@ body:
     }
                     
 return:
-   {
-      "context": {
-      },
-      "event": {
-        "header": {
-           "namespace": "DNA.IrcodeInfo",
-           "name": "Response",
-           "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+{
+    "context":{
+
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA.IrcodeInfo",
+            "name":"Response",
+            "interfaceVersion":"2",
+            "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
-        "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
-          "endpointId": "appliance-001"
+        "endpoint":{
+            "scope":{
+                "type":"",
+                "token":"some-access-token"
+            },
+            "endpointId":"appliance-001"
         },
         "payload":{
-            "ircode":[{
-                "pid":"",                 
-                "ircodeid":"",
-                "timestamp":1514736000000, 
-                "ircode": {
-                    "function":"on",          
-                    "name":"空调打开",
-                    "desc":"空调打开，模式制热,23摄氏度，自动风",     
-                    "code":"2600121343241325243521342342141"   
-                }}]
+            "ircode":[
+                {
+                    "pid":"",
+                    "ircodeid":"",
+                    "timestamp":1514736000000,
+                    "ircode":[
+                        {
+                            "function":"on",
+                            "name":"空调打开",
+                            "desc":"空调打开，模式制热,23摄氏度，自动风",
+                            "code":"2600121343241325243521342342141"
+                        }
+                    ]
+                }
+            ]
         }
-      }
     }
+}
 ```
 
 # 品类以及对应功能参考表
