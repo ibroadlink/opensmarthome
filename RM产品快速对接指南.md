@@ -11,25 +11,25 @@ BroadLink经过多年的积累，已经构建了目前全球最大的各品类�
 
 # 对接流程介绍
 1. 获取品类列表
-    
+
     通过云端接口获取当前支持的品类列表，也可以固化部分品类，比如空调，电视
 
 2. 获取品类下的品牌列表
-    
+
     通过云端接口获取品类下的当前支持的品牌列表
 
 3. 获取品牌下的型号列表
-    
+
     获取品牌下的红码列表，该列表是有优先级的，排在前面的适配的产品更多
 
 4. 获取红外码编号，和对应的面板类型
 
 5. 通过SDK发送红外码
-    
+
     将红码按要求的格式通过SDK发送给RM后，用户可以观察自己的设备是否有响应，进而判断匹配是否成功， 若成功，则返回生成的面板信息。
 
 6. 云端注册与控制
-    
+
     通过调用云端的XX接口
 
 # SDK具体接口参考
@@ -81,15 +81,6 @@ body:
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
                 "interfaceVersion": "2"
             },
-            "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
-                "endpointId": "appliance-001",//暂时不需要
-                "devicePairedInfo": devicePairedInfo,
-                "cookie": {}
-            },
             "payload": {
             }
         }
@@ -105,13 +96,6 @@ return:
            "name": "Response",
            "interfaceVersion": "2",
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
-        },
-        "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
-          "endpointId": "appliance-001"
         },
         "payload": {
             "devtype": [{"devtypeid":int,"devtypename":string}]
@@ -135,15 +119,6 @@ body:
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
                 "interfaceVersion": "2"
             },
-            "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
-                "endpointId": "appliance-001",//暂时不需要
-                "devicePairedInfo": devicePairedInfo,
-                "cookie": {}
-            },
             "payload": {
                 "devtypeid":0
             }
@@ -160,13 +135,6 @@ return:
            "name": "Response",
            "interfaceVersion": "2",
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
-        },
-        "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
-          "endpointId": "appliance-001"
         },
         "payload": {
             "brand": [{"brandid":int,"brand":string,"enbrand":string,"famousstatus":int}]
@@ -190,15 +158,6 @@ body:
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
                 "interfaceVersion": "2"
             },
-            "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
-                "endpointId": "appliance-001",//暂时不需要
-                "devicePairedInfo": devicePairedInfo,
-                "cookie": {}
-            },
             "payload": {
                 "devtypeid":0，
                 "brandid":1
@@ -217,13 +176,6 @@ return:
            "interfaceVersion": "2",
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
-        "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
-          "endpointId": "appliance-001"
-        },
         "payload": {
             "version": [{"versionid":0,"version":"","devtypeid":0,brandid:0}]
         }
@@ -232,7 +184,114 @@ return:
 ```
 
 
-4. 获取红码列表
+4. 获取地区列表
+
+   ```json
+   URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
+   body:
+       {
+           "directive": {
+               "header": {
+                   "namespace": "DNA.IrcodeInfo",
+                   "name": "getlocate",
+                   "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                   "interfaceVersion": "2"
+               },
+               "payload": {
+                  "locateid": 0 //父地区id，最高为0
+               }
+           }
+       }
+   return：
+      {
+         "context": {
+         },
+         "event": {
+           "header": {
+              "namespace": "DNA.IrcodeInfo",
+              "name": "Response",
+              "interfaceVersion": "2",
+              "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           },
+           "payload": {
+             "subareainfo": [
+               {
+                   "locateid": 2405,
+                   "levelid": 3,
+                   "name": "朝阳市",
+                   "isleaf": 1,
+                   "status": "正常",
+                   "initials": "C"
+               },
+               {
+                   "locateid": 150,
+                   "levelid": 3,
+                   "name": "本溪市",
+                   "isleaf": 1,
+                   "status": "正常",
+                   "initials": "B"
+               } ]
+           }
+         }
+       }
+
+   ```
+
+   ​
+
+5. 获取运营商列表
+
+   ```jso
+   URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
+   body:
+       {
+           "directive": {
+               "header": {
+                   "namespace": "DNA.IrcodeInfo",
+                   "name": "getprovider",
+                   "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                   "interfaceVersion": "2"
+               },
+               "payload": {
+                 	"locateid": 51
+               }
+           }
+       }
+   return：
+      {
+         "context": {
+         },
+         "event": {
+           "header": {
+              "namespace": "DNA.IrcodeInfo",
+              "name": "Response",
+              "interfaceVersion": "2",
+              "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           },
+           "payload": {
+           "providerinfo": [
+               {
+                   "providerid": 72,
+                   "providername": "通用",
+                   "providernameen": "",
+                   "initials": "T"
+               },
+               {
+                   "providerid": 179,
+                   "providername": "大连广电",
+                   "providernameen": "",
+                   "initials": "D"
+               }
+           ]
+           }
+         }
+       }
+
+   ```
+
+   ​
+
+6. 获取红码列表
 
 ```
 URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
@@ -258,8 +317,9 @@ body:
             },
             "payload": {
                 "devtypeid":0，
-                "brandid":1,
+                "brandid":1,//(电视、空调)
                 "versionid":0//(可选)
+                "providerid":1//(机顶盒)
             }
         }
     }
