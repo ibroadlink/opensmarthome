@@ -223,7 +223,7 @@ return:
                    "status": "正常",
                    "initials": "C"
                },
-               {
+               {         
                    "locateid": 150,
                    "levelid": 3,
                    "name": "本溪市",
