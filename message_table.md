@@ -27,10 +27,6 @@ ChangePowerState请求
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		      "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -61,10 +57,6 @@ ChangePowerState请求
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -93,10 +85,6 @@ ChangePowerState请求
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -127,10 +115,6 @@ ChangePowerState请求
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -154,12 +138,8 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
        "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	"devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -189,10 +169,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -218,10 +194,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -252,10 +224,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -276,10 +244,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<some-access-token>"
-          },
           "endpointId": "<appliance-001>",
           "cookie": {
              
@@ -312,10 +276,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -334,10 +294,6 @@ ChangePowerState请求
           "payloadVersion": "3"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<some-access-token>"
-          },
           "endpointId": "<appliance-001>",
           "cookie": {}
         },
@@ -367,10 +323,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -396,10 +348,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -424,10 +372,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -451,10 +395,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -478,10 +418,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -505,10 +441,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -532,10 +464,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -559,10 +487,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -589,10 +513,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -618,10 +538,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -654,10 +570,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -680,12 +592,8 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -716,10 +624,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -748,10 +652,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -776,10 +676,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -803,10 +699,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -831,10 +723,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -862,10 +750,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -893,10 +777,6 @@ ChangePowerState请求
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
             },
             "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
                 "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
                 "cookie": {}
@@ -936,10 +816,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -967,10 +843,6 @@ ChangePowerState请求
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
             },
             "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
                 "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
                 "cookie": {}
@@ -1003,10 +875,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1034,10 +902,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1071,10 +935,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1103,10 +963,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1140,10 +996,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1166,10 +1018,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1203,10 +1051,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1234,10 +1078,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1270,10 +1110,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1302,10 +1138,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1344,10 +1176,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1371,10 +1199,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1413,10 +1237,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1441,10 +1261,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1477,10 +1293,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1503,10 +1315,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1539,10 +1347,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1566,10 +1370,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1602,10 +1402,6 @@ ChangePowerState请求
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1635,10 +1431,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1676,10 +1468,6 @@ ChangePowerState请求
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -1704,10 +1492,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1745,10 +1529,6 @@ ChangePowerState请求
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -1776,10 +1556,6 @@ ChangePowerState请求
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
@@ -1817,10 +1593,6 @@ ChangePowerState请求
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -1846,10 +1618,6 @@ ChangePowerState请求
               "endpointId": "appliance-001",
 		  "devicePairedInfo":devicePairedInfo,
               "cookie": {},
-              "scope":{ 
-                    "type":"",
-                    "token":"some-access-token"
-              }
             },
             "payload": {
             }
@@ -1884,10 +1652,6 @@ ChangePowerState请求
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -2909,10 +2673,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
@@ -2936,10 +2696,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
 		  "devicePairedInfo":devicePairedInfo,
           "cookie": {
