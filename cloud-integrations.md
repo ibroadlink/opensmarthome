@@ -1,11 +1,117 @@
 ## 云端接口参考
 <span style="color:#ccc">1</span> 接口校验和安全方式方式
+<span style="color:#ccc">1.1</span> 云端身份校验接口
+POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
+
+请求：
+{
+    "directive": {
+        "header": {
+            "namespace": "DNA.CloudIdentity",
+            "name": "Identity",
+            "interfaceVersion": "2",
+            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+        },
+        "payload": {
+            "device": {
+                "deviceInfo": {
+                  "mac":"",
+                  "did":"",
+                  "devicetype":""
+                  },
+                "challenge":""
+            },
+            "scope": {
+            },
+            "options": {
+            }
+        }
+    }
+}
+
+响应：
+{
+    "context": {},
+    "event": {
+        "header": {
+            "namespace": "DNA.CloudIdentity",
+            "name": "Response",
+            "interfaceVersion": "2",
+            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
+        },
+        "payload": {
+          "device": {
+              "deviceInfo": {
+                "mac":"",
+                "did":"",
+                "devicetype":""
+              },
+              "challenge":"",
+              "signature":""
+          },
+        }
+      }
+}
+
+其中challenge为设备和激活云端生成的加密签名，只有设备可以解析。
+
+<span style="color:#ccc">1.2</span> 设备身份声明接口
+POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
+
+请求：
+{
+    "directive": {
+        "header": {
+            "namespace": "DNA.DeviceIdentity",
+            "name": "Identity",
+            "interfaceVersion": "2",
+            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+        },
+        "payload": {
+            "device": {
+                "deviceInfo": {
+                  "mac":"",
+                  "did":"",
+                  "devicetype":""
+                  },
+                "signature":""
+            },
+            "scope": {
+            },
+            "options": {
+            }
+        }
+    }
+}
+
+响应：
+{
+    "context": {},
+    "event": {
+        "header": {
+            "namespace": "DNA.DeviceIdentity",
+            "name": "Response",
+            "interfaceVersion": "2",
+            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
+        },
+        "payload": {
+          "device": {
+              "deviceInfo": {
+                "mac":"",
+                "did":"",
+                "devicetype":""
+              },
+              "shareKey":""
+          },
+        }
+      }
+}
 
 <span style="color:#ccc">2</span> 云端接口
 
 <span style="color:#ccc">2.1</span> 设备注册接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
+POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 
 请求：
 {
@@ -18,7 +124,12 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": deviceInfo,
+              "devicePairedInfo": {
+                "mac":"",
+                "did":"",
+                "pid":"",
+                "cookie":base64(cookieStu) 具体见透传字段//为空返回设备描述//不为空返回设备落库信息
+              }      
             },
             "scope": {
             },
@@ -40,20 +151,21 @@ POST https://(OpenproxyURL)/openproxy/v2/register?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": deviceInfo,
+              "devicePairedInfo": devicePairedInfo,
           },
         },
         "endpoints": [
             {
-                "endpointId": "appliance-001"，//设备的,一般为sdk设备发现的did
-                "friendlyName": "卧室灯",//设备的默认名称
-                "description": "由BroadLink生产的灯",
+                "endpointId": "appliance-001"，//设备的,一般为sdk设备发现的did
+                "friendlyName": "卧室灯",//设备的默认名称
+                "description": "由BroadLink生产的灯",
                 "manufacturerName": "Sample Manufacturer",
                 "icon":"产品图片URL",
                 "brand":"品牌",
                 "displayCategories": [
                     "LIGHT"
                 ],
+                "devicePairedInfo":{},
                 "cookie": {
                     "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回",
                     "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回",
