@@ -1,9 +1,9 @@
 ## 云端接口参考
-```
+
 <span style="color:#ccc">1</span> 接口校验和安全方式方式
 
 <span style="color:#ccc">1.1</span> 云端身份校验接口
-
+```
 POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 
 请求：
@@ -55,11 +55,11 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         }
       }
 }
-
+```
 其中challenge为设备和激活云端生成的加密签名，只有设备可以解析。
 
 <span style="color:#ccc">1.2</span> 设备身份声明接口
-
+```
 POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 
 请求：
@@ -110,7 +110,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         }
       }
 }
-
+```
 <span style="color:#ccc">2</span> 云端接口
 
 <span style="color:#ccc">2.1</span> 设备注册接口
