@@ -198,33 +198,38 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 ```
 <span style="color:#ccc">2.2</span> 设备控制接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
     "header": {
-       "namespace": "DNA.PowerControl",//控制能力
-       "name": "ChangePowerState",//控制动作
-       "interfaceVersion": "2",//目前版本标识
-       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"//请求id,返回信息中会保持一致。
-    },
+       "namespace": "DNA.PowerControl",//控制能力
+       "name": "ChangePowerState",//控制动作
+       "interfaceVersion": "2",//目前版本标识
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"//请求id,返回信息中会保持一致。
+    },
     "endpoint": {
       "scope": {
       },
-      ”devicePairedInfo":devicePairedInfo,//sdk设备配对
-      "endpointId": "Some-Device-ID",//注册返回
-      "cookie": {}//目前未在使用，方便将来扩展
-    },
+      ”devicePairedInfo": {
+        "did":"",      //设备的唯一ID
+        "pid":"",      //设备产品类型ID
+        "mac":"",      //设备MAC地址
+        "cookie":""    //第三方云端存储的设备信息cookie
+      }
+      "endpointId": "Some-Device-ID",//注册返回
+      "cookie": {}//注册返回的cookie,第三方云端透传
+    },
     "payload": {
-        "powerState":"OFF"//控制属性和属性值
-    }
+        "powerState":"OFF"//控制属性和属性值
+    }
   }
 }
 响应：
 {
   "context": {//控制参数
-    "properties": [ {
-       "namespace": "DNA.PowerControl",
+    "properties": [ {
+       "namespace": "DNA.PowerControl",
        "name": "powerState",
        "value": “ON”,
        "timeOfSample": "2017-02-03T16:20:50.52Z",
@@ -233,15 +238,63 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
   "event": {
     "header": {
        "namespace": "DNA.PowerControl",
-       "name": "Response",//成功返回标识
-       "interfaceVersion": "2",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
       "scope": {
       },
-      "endpointId": "appliance-001"//控制设备
-    },
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.2.1</span> 设备自定义功能控制
+```
+POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.CustomFunctionControl",
+       "name": "IrcodeFunction",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo": {
+        "did":"",      //设备的唯一ID
+        "pid":"",      //设备产品类型ID
+        "mac":"",      //设备MAC地址
+        "cookie":""    //第三方云端存储的设备信息cookie
+        }
+      "endpointId": "Some-Device-ID",//注册返回
+      "cookie": {}//注册返回的cookie,第三方云端透传
+    },
+    "payload": {
+        "function":"up"//对应红外码的function
+    }
+  }
+}
+响应：
+{
+  "context": {},
+  "event": {
+    "header": {
+       "namespace": "DNA.CustomFunctionControl",
+       "name": "IrcodeFunction",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
     "payload": {
     }
   }
@@ -265,7 +318,12 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
     "endpoints": [{
       "scope": {
       },
-      ”devicePairedInfo":devicePairedInfo,
+      ”devicePairedInfo": {
+             "did":"",      //设备的唯一ID
+             "pid":"",      //设备产品类型ID
+             "mac":"",      //设备MAC地址
+             "cookie":""    //设备Pair获取Cookie
+           }，
       "endpointId": "Some-Device-ID",
       "cookie": {}
     }],
@@ -299,7 +357,7 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
 
 <span style="color:#ccc">2.4</span> 设备状态查询接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -310,9 +368,12 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo":devicePairedInfo,
+      ”devicePairedInfo": {
+             "did":"",      //设备的唯一ID
+             "pid":"",      //设备产品类型ID
+             "mac":"",      //设备MAC地址
+             "cookie":""    //设备Pair获取Cookie
+           }，
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -363,38 +424,311 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 
 ```
 
-<span style="color:#ccc">2.6</span> 接口错误响应
+<span style="color:#ccc">2.6</span> 透传红码接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.FreeControl",
+       "name": "DnaCodeControl",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+        "dnaCode":"b445sdfafad112224sdf"
+    }
+  }
+}
+响应：
+{
+  "context": {//控制参数
+    "properties": [ {
+       "namespace": "DNA.FreeControl",
+       "name": "DnaCodeControl",
+       "value": "b445sdfafad112224sdf",//控制指令
+       "timeOfSample": "2017-02-03T16:20:50.52Z",
+    } ]
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.FreeControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
 
-<span style="color:#ccc">2.6.1</span> 错误响应格式
+<span style="color:#ccc">2.7</span> RM学习功能接口
+
+<span style="color:#ccc">2.7.1</span> RM进入学习功能接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "StudyIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.7.2</span> RM查询红码学习结果
+```
+POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "GetIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+
+响应：
+{
+    "context":{
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA.RMControl",
+            "messageId":"30d2cd1a-ce4f-4542-aa5e-04bd0a6492d5",//新生成
+            "name":"GetIrCode",
+            "interfaceVersion":"2"
+        },
+        "endpoint":{
+            "endpointId":"appliance-001"
+        },
+        "payload":{
+            "code":"2600ac000700059e0001158911121211"
+        }
+    }
+}
+```
+
+<span style="color:#ccc">2.8</span> 设备管理相关
+
+<span style="color:#ccc">2.8.1</span> OTA查询版本接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "QueryVersion",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+         "version":"xxxxxx"//查询返回数据
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.8.2</span> OTA版本升级
+```
+POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "OTAUpgrade",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+        "url":"xxxx"
+    }
+  }
+}
+响应：
+{
+  "context": {//控制参数
+    "properties": [ {
+       "namespace": "DNA.ManagerControl",
+       "name": "OTAUpgrade",
+       "value": "b445sdfafad112224sdf",//控制指令
+       "timeOfSample": "2017-02-03T16:20:50.52Z",
+    } ]
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    }
+    "payload": {
+
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.8.3</span> 远程复位接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "Reset",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "scope": {
+      },
+      ”devicePairedInfo":devicePairedInfo,
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.ManagerControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+         "version":"xxxxxx"//查询返回数据
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.9</span> 接口错误响应
+
+<span style="color:#ccc">2.9.1</span> 错误响应格式
 
 ```
-返回消息中 
+返回消息中
     event.name="ErrorResponse",
-    payload中是具体错误类型和原因。
+    payload中是具体错误类型和原因。
 举例：
 {
   "context": {},
   "event": {
       "header": {
-      "namespace": "DNA.PowerControl",
+      "namespace": "DNA.PowerControl",
       "messageId": "30d2cd1a-ce4f-4542-aa5e-04bd0a6492d5",
       "name": "ErrorResponse",
       "payloadVersion": "2"
     },
     "endpoint": {
-      "scope": {
-        "type": "BearerToken",
-        "token": "some-access-token"
-      },
       "endpointId": "appliance-001"
     },
     "payload": {
         "type": "ENDPOINT_UNREACHABLE",
         "message":"xxx",
     }
-  }
+ }
 ```
-<span style="color:#ccc">2.6.2</span> 错误码表
+<span style="color:#ccc">2.9.2</span> 错误码表
 
 |字段 | 说明 | 备注|
 |------------ | ------------- | -------------|
@@ -412,7 +746,7 @@ POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
 |SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
 
 
-<span style="color:#ccc">2.７</span> 透传指令控制接口(预发布)
+<span style="color:#ccc">2.10</span> 透传指令控制接口(预发布)
 ```
 POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
