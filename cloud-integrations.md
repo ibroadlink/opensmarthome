@@ -134,10 +134,6 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
                 "pid":"",
                 "cookie":base64(cookieStu) 具体见透传字段//为空返回设备描述//不为空返回设备落库信息
               }      
-            },
-            "scope": {
-            },
-            "options": {
             }
         }
     }
@@ -152,11 +148,6 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
             "name": "Response",
             "interfaceVersion": "2",
             "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
-        },
-        "payload": {
-          "device": {
-              "devicePairedInfo": devicePairedInfo,
-          },
         },
         "endpoints": [
             {
