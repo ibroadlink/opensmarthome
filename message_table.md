@@ -24,7 +24,7 @@ ChangePowerState请求
            "namespace": "DNA.PowerControl",
            "name": "ChangePowerState",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -46,7 +46,7 @@ ChangePowerState请求
            "namespace": "DNA.PowerControl",
            "name": "powerState",
            "value": "ON",
-           "timeOfSample": "2017-02-03T16:20:50.52Z",
+           "timeOfSample": "2017-02-03T16:20:50.52Z"
         } ]
       },
       "event": {
@@ -54,7 +54,7 @@ ChangePowerState请求
            "namespace": "DNA.PowerControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -81,7 +81,7 @@ ChangePowerState请求
            "namespace": "DNA.ChannelControl",
            "name": "ChangeChannel",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
 
@@ -104,7 +104,7 @@ ChangePowerState请求
            "namespace": "DNA.ChannelControl",
            "name": "channelNumber",
            "value":"123",
-           "timeOfSample": "2017-02-03T16:20:50.52Z",
+           "timeOfSample": "2017-02-03T16:20:50.52Z"
         } ]
       },
       "event": {
@@ -112,7 +112,7 @@ ChangePowerState请求
            "namespace": "DNA.ChannelControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -158,7 +158,7 @@ ChangePowerState请求
                "namespace": "DNA.ChannelControl",
                "name": "channelSteps",
                "value": 1
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -214,7 +214,7 @@ ChangePowerState请求
                "namespace": "DNA.VolumeControl",
                "name": "volumeSteps",
                "value": 20
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -246,9 +246,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<appliance-001>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-             
-          }
+          "cookie": {}
         },
         "payload": {
           "volume": 50
@@ -266,7 +264,7 @@ ChangePowerState请求
                "namespace": "DNA.VolumeControl",
                "name": "volume",
                "value": 50
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -316,7 +314,7 @@ ChangePowerState请求
                "namespace": "DNA.VolumeControl",
                "name": "mute",
                "value": true
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -354,8 +352,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -377,8 +374,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -398,9 +394,8 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+	  "devicePairedInfo":devicePairedInfo,
+          "cookie": {}
         },
         "payload": {
         }
@@ -421,8 +416,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -443,8 +437,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -465,8 +458,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -487,8 +479,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -532,7 +523,7 @@ ChangePowerState请求
           "namespace": "DNA.WindSpeedControl",
           "name": "SetWindSpeed",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -555,7 +546,7 @@ ChangePowerState请求
                "namespace": "DNA.PercentageControl",
                "name": "windSpeed",
                "value":"HIGH",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -584,7 +575,7 @@ ChangePowerState请求
           "namespace": "DNA.WindSpeedControl",
           "name": "AdjustWindSpeed",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -607,7 +598,7 @@ ChangePowerState请求
                "namespace": "DNA.PercentageControl",
                "name": "windSpeedSteps",
                "value":1,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -645,8 +636,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -667,8 +657,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -689,8 +678,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -711,8 +699,7 @@ ChangePowerState请求
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -756,7 +743,7 @@ ChangePowerState请求
                 "namespace": "DNA.ColorControl",
                 "name": "SetColor",
                 "interfaceVersion": "2",
-                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
             },
             "endpoint": {
                 "endpointId": "appliance-001",
@@ -787,7 +774,7 @@ ChangePowerState请求
                     "saturation": 0.7138,
                     "brightness": 0.6524
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -820,7 +807,7 @@ ChangePowerState请求
                 "namespace": "DNA.ColorNameControl",
                 "name": "SetColorName",
                 "interfaceVersion": "2",
-                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
             },
             "endpoint": {
                 "endpointId": "appliance-001",
@@ -843,7 +830,7 @@ ChangePowerState请求
                "namespace": "DNA.ColorNameControl",
                "name": "colorName",
                "value":"RED",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -876,7 +863,7 @@ ChangePowerState请求
           "namespace": "DNA.ColorTempControl",
           "name": "SetColorTemp",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -899,7 +886,7 @@ ChangePowerState请求
                "namespace": "DNA.ColorTempControl",
                "name": "colortemp",
                "value":3000,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -933,7 +920,7 @@ ChangePowerState请求
           "namespace": "DNA.BrightnessControl",
           "name": "SetBrightness",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -956,7 +943,7 @@ ChangePowerState请求
                "namespace": "DNA.BrightnessControl",
                "name": "brightness",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -985,7 +972,7 @@ ChangePowerState请求
           "namespace": "DNA.BrightnessControl",
           "name": "AdjustBrightness",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1008,7 +995,7 @@ ChangePowerState请求
                "namespace": "DNA.BrightnessControl",
                "name": "brightness",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1041,7 +1028,7 @@ ChangePowerState请求
           "namespace": "DNA.PercentageControl",
           "name": "SetPercentage",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1064,7 +1051,7 @@ ChangePowerState请求
                "namespace": "DNA.PercentageControl",
                "name": "percentage",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1099,7 +1086,7 @@ ChangePowerState请求
           "namespace": "DNA.ThermostatControl",
           "name": "SetTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1128,7 +1115,7 @@ ChangePowerState请求
                     "value":23.0,
                     "scale":"CELSIUS"
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1157,7 +1144,7 @@ ChangePowerState请求
           "namespace": "DNA.ThermostatControl",
           "name": "AdjustTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1186,7 +1173,7 @@ ChangePowerState请求
                     "value":-2,
                     "scale":"CELSIUS"
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1216,7 +1203,7 @@ ChangePowerState请求
           "namespace": "DNA.ThermostatControl",
           "name": "SetFixedTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1239,7 +1226,7 @@ ChangePowerState请求
                "namespace": "DNA.ThermostatControl",
                "name": "fixedTargetTemperature",
                "value":23,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1268,7 +1255,7 @@ ChangePowerState请求
           "namespace": "DNA.ThermostatControl",
           "name": "AdjustFixedTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1291,7 +1278,7 @@ ChangePowerState请求
                "namespace": "DNA.ThermostatControl",
                "name": "fixedTargetTemperatureSteps",
                "value":1,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1321,7 +1308,7 @@ ChangePowerState请求
           "namespace": "DNA.ThermostatControl",
           "name": "SetMode",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1344,7 +1331,7 @@ ChangePowerState请求
                "namespace": "DNA.ThermostatControl",
                "name": "mode",
                "value":"COLD",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -1378,7 +1365,7 @@ ChangePowerState请求
           "namespace": "DNA.TemperatureSensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1405,7 +1392,7 @@ ChangePowerState请求
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -1437,7 +1424,7 @@ ChangePowerState请求
           "namespace": "DNA.HumiditySensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1464,7 +1451,7 @@ ChangePowerState请求
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -1496,7 +1483,7 @@ ChangePowerState请求
           "namespace": "DNA.PM2_5Sensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1523,7 +1510,7 @@ ChangePowerState请求
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -1580,7 +1567,7 @@ ChangePowerState请求
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -1670,7 +1657,7 @@ valueName                        值名称
                     "namespace": "DNA.PercentageControl",
                     "name": "percentage",
                     "value": 40,
-                    "timeOfSample": "2017-02-03T16:20:50.52Z",
+                    "timeOfSample": "2017-02-03T16:20:50.52Z"
                   }
                 ]
               }
@@ -1755,7 +1742,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.SceneControl",
            "name": "Activate",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1778,7 +1765,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.SceneControl",
            "name": "ActivationStarted",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -1799,7 +1786,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.SceneControl",
            "name": "Deactivate",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1822,7 +1809,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.SceneControl",
            "name": "DeactivationStarted",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -1852,8 +1839,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -1874,8 +1860,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -1896,8 +1881,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -1941,7 +1925,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.TextControl",
            "name": "Request",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -1967,7 +1951,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.TextControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -2004,7 +1988,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.CustomizedRemoteControl",
            "name": "打开",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2110,7 +2094,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.PowerControl",
            "name": "ChangePowerState",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2132,7 +2116,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.PowerControl",
            "name": "powerState",
            "value": "ON",
-           "timeOfSample": "2017-02-03T16:20:50.52Z",
+           "timeOfSample": "2017-02-03T16:20:50.52Z"
         } ]
       },
       "event": {
@@ -2140,7 +2124,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.PowerControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -2168,7 +2152,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.ChannelControl",
            "name": "ChangeChannel",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2190,7 +2174,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.ChannelControl",
            "name": "channelNumber",
            "value":"123",
-           "timeOfSample": "2017-02-03T16:20:50.52Z",
+           "timeOfSample": "2017-02-03T16:20:50.52Z"
         } ]
       },
       "event": {
@@ -2198,7 +2182,7 @@ cause字段用来描述设备状态变化的原因。
            "namespace": "DNA.ChannelControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -2244,7 +2228,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ChannelControl",
                "name": "channelSteps",
                "value": 1
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2300,7 +2284,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.VolumeControl",
                "name": "volumeSteps",
                "value": 20
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2350,7 +2334,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.VolumeControl",
                "name": "volume",
                "value": 50
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2400,7 +2384,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.VolumeControl",
                "name": "mute",
                "value": true
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2438,8 +2422,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2460,8 +2443,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2482,8 +2464,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2504,8 +2485,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2526,8 +2506,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2548,8 +2527,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2570,8 +2548,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2615,7 +2592,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.WindSpeedControl",
           "name": "SetWindSpeed",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2638,7 +2615,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.PercentageControl",
                "name": "windSpeed",
                "value":"HIGH",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2667,7 +2644,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.WindSpeedControl",
           "name": "AdjustWindSpeed",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2690,7 +2667,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.PercentageControl",
                "name": "windSpeedSteps",
                "value":1,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2728,8 +2705,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2750,8 +2726,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2772,8 +2747,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2794,8 +2768,7 @@ cause字段用来描述设备状态变化的原因。
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -2839,7 +2812,7 @@ cause字段用来描述设备状态变化的原因。
                 "namespace": "DNA.ColorControl",
                 "name": "SetColor",
                 "interfaceVersion": "2",
-                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
             },
             "endpoint": {
                 "endpointId": "appliance-001",
@@ -2870,7 +2843,7 @@ cause字段用来描述设备状态变化的原因。
                     "saturation": 0.7138,
                     "brightness": 0.6524
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2903,7 +2876,7 @@ cause字段用来描述设备状态变化的原因。
                 "namespace": "DNA.ColorNameControl",
                 "name": "SetColorName",
                 "interfaceVersion": "2",
-                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
             },
             "endpoint": {
                 "endpointId": "appliance-001",
@@ -2926,7 +2899,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ColorNameControl",
                "name": "colorName",
                "value":"RED",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -2959,7 +2932,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ColorTempControl",
           "name": "SetColorTemp",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -2982,7 +2955,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ColorTempControl",
                "name": "colortemp",
                "value":3000,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3016,7 +2989,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.BrightnessControl",
           "name": "SetBrightness",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3039,7 +3012,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.BrightnessControl",
                "name": "brightness",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3068,7 +3041,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.BrightnessControl",
           "name": "AdjustBrightness",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3091,7 +3064,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.BrightnessControl",
                "name": "brightness",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3124,7 +3097,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.PercentageControl",
           "name": "SetPercentage",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3147,7 +3120,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.PercentageControl",
                "name": "percentage",
                "value":42,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3182,7 +3155,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ThermostatControl",
           "name": "SetTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3211,7 +3184,7 @@ cause字段用来描述设备状态变化的原因。
                     "value":23.0,
                     "scale":"CELSIUS"
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3240,7 +3213,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ThermostatControl",
           "name": "AdjustTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3269,7 +3242,7 @@ cause字段用来描述设备状态变化的原因。
                     "value":-2,
                     "scale":"CELSIUS"
                },
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3299,7 +3272,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ThermostatControl",
           "name": "SetFixedTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3322,7 +3295,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ThermostatControl",
                "name": "fixedTargetTemperature",
                "value":23,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3351,7 +3324,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ThermostatControl",
           "name": "AdjustFixedTargetTemperature",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3374,7 +3347,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ThermostatControl",
                "name": "fixedTargetTemperatureSteps",
                "value":1,
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3404,7 +3377,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.ThermostatControl",
           "name": "SetMode",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3427,7 +3400,7 @@ cause字段用来描述设备状态变化的原因。
                "namespace": "DNA.ThermostatControl",
                "name": "mode",
                "value":"COLD",
-               "timeOfSample": "2017-02-03T16:20:50.52Z",
+               "timeOfSample": "2017-02-03T16:20:50.52Z"
             }
         ]
       },
@@ -3463,7 +3436,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.TemperatureSensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3490,7 +3463,7 @@ cause字段用来描述设备状态变化的原因。
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -3523,7 +3496,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.HumiditySensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3550,7 +3523,7 @@ cause字段用来描述设备状态变化的原因。
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -3583,7 +3556,7 @@ cause字段用来描述设备状态变化的原因。
           "namespace": "DNA.PM2_5Sensor",
           "name": "ReportState",
           "interfaceVersion": "2",
-          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+          "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3610,7 +3583,7 @@ cause字段用来描述设备状态变化的原因。
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -3667,7 +3640,7 @@ cause字段用来描述设备状态变化的原因。
                         "scaleName":"",
                         "valueName":""
                    },
-                   "timeOfSample": "2017-02-03T16:20:50.52Z",
+                   "timeOfSample": "2017-02-03T16:20:50.52Z"
                 }
             ]
           },
@@ -3747,7 +3720,7 @@ valueName                        值名称
                     "namespace": "DNA.PercentageControl",
                     "name": "percentage",
                     "value": 40,
-                    "timeOfSample": "2017-02-03T16:20:50.52Z",
+                    "timeOfSample": "2017-02-03T16:20:50.52Z"
                   }
                 ]
               }
@@ -3834,7 +3807,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.SceneControl",
            "name": "Activate",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3857,7 +3830,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.SceneControl",
            "name": "ActivationStarted",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -3878,7 +3851,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.SceneControl",
            "name": "Deactivate",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -3900,7 +3873,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.SceneControl",
            "name": "DeactivationStarted",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
           "endpointId": "appliance-001"
@@ -3930,8 +3903,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -3952,8 +3924,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -3974,8 +3945,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
 	  "devicePairedInfo":devicePairedInfo,
-          "cookie": {
-          }
+          "cookie": {}
         },
         "payload": {
         }
@@ -4019,7 +3989,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.TextControl",
            "name": "Request",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
           "endpointId": "appliance-001",
@@ -4044,7 +4014,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.TextControl",
            "name": "Response",
            "interfaceVersion": "2",
-           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+           "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
         "endpoint": {
         "payload": {
@@ -4079,7 +4049,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "namespace": "DNA.CustomizedRemoteControl",
            "name": "打开",
            "interfaceVersion": "2",
-           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
         },
         "endpoint": {
 		"endpointId": "appliance-001",
