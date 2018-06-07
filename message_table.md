@@ -28,7 +28,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		      "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -63,7 +63,6 @@ ChangePowerState请求
         }
       }
     }
-
 ```
 
 <span style="color:#ccc">3.2</span> 频道控制
@@ -85,8 +84,9 @@ ChangePowerState请求
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
+
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+          "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -139,7 +139,7 @@ ChangePowerState请求
         },
        "endpoint": {
           "endpointId": "appliance-001",
-	"devicePairedInfo":devicePairedInfo,
+          "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -195,7 +195,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -204,6 +204,7 @@ ChangePowerState请求
       }
     }
 ```
+
 响应
 ```
     {
@@ -234,7 +235,6 @@ ChangePowerState请求
 
 * 直接控制请求
 ```
-   
     {
       "directive": {
         "header": {
@@ -245,6 +245,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<appliance-001>",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
              
           }
@@ -283,6 +284,7 @@ ChangePowerState请求
       }
     }
 ```
+
 * 静音控制请求
 ```
     {
@@ -295,6 +297,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<appliance-001>",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -303,6 +306,7 @@ ChangePowerState请求
       }
     }
 ```
+
 响应
 ```
     {
@@ -349,7 +353,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -361,7 +365,6 @@ ChangePowerState请求
 
 * 暂停请求
 
-   
 ```
     {
       "directive": {
@@ -373,7 +376,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -382,10 +385,9 @@ ChangePowerState请求
       }
     }
 ```
+
 * 继续请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -404,11 +406,10 @@ ChangePowerState请求
         }
       }
     }
- ```   
+ ```
+ 
 * 下一首请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -419,7 +420,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -428,10 +429,9 @@ ChangePowerState请求
       }
     }
 ```
+
 * 上一首请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -442,7 +442,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -450,11 +450,10 @@ ChangePowerState请求
         }
       }
     }
-```    
+```
+
 * 快进请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -465,7 +464,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -474,10 +473,9 @@ ChangePowerState请求
       }
     }
 ```
+
 * 回放请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -488,7 +486,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -497,10 +495,9 @@ ChangePowerState请求
       }
     }
 ```
+
 * 响应
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -539,7 +536,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -548,10 +545,9 @@ ChangePowerState请求
       }
     }
 ```
+
 响应:
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -577,12 +573,11 @@ ChangePowerState请求
       }
     }
 ```
+
 具体支持的列表，请参考`智能家居接口属性参考表 `
 
 * 步长调整风速请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -602,10 +597,9 @@ ChangePowerState请求
       }
     }
 ```
+
 响应:
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -640,9 +634,6 @@ ChangePowerState请求
 
 * 开启摆风请求
 ```
-
-   
-
     {
       "directive": {
         "header": {
@@ -653,7 +644,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -665,8 +656,6 @@ ChangePowerState请求
 
 * 停止摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -677,7 +666,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -686,10 +675,9 @@ ChangePowerState请求
       }
     }
 ```
+
 * 水平摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -700,7 +688,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -712,8 +700,6 @@ ChangePowerState请求
 
 * 垂直摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -724,7 +710,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -736,8 +722,6 @@ ChangePowerState请求
 
 响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -766,8 +750,6 @@ ChangePowerState请求
 
 * 请求
 ```
-   
-
     {
         "directive": {
             "header": {
@@ -778,7 +760,7 @@ ChangePowerState请求
             },
             "endpoint": {
                 "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+		"devicePairedInfo":devicePairedInfo,
                 "cookie": {}
             },
             "payload": {
@@ -791,9 +773,9 @@ ChangePowerState请求
         }
     }
 ```
+
 * 响应
 ```
-
     {
       "context": {
         "properties": [
@@ -832,8 +814,6 @@ ChangePowerState请求
 
 请求
 ```
-   
-
     {
         "directive": {
             "header": {
@@ -844,7 +824,7 @@ ChangePowerState请求
             },
             "endpoint": {
                 "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+		"devicePairedInfo":devicePairedInfo,
                 "cookie": {}
             },
             "payload": {
@@ -853,10 +833,9 @@ ChangePowerState请求
         }
     }
 ```
+
 响应
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -890,9 +869,7 @@ ChangePowerState请求
     接口名称：DNA.ColorTempControl
 
 * 设置色温请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -903,7 +880,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -914,9 +891,7 @@ ChangePowerState请求
 ```    
 
 * 设置色温响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -951,9 +926,7 @@ ChangePowerState请求
     接口名称：DNA.BrightnessControl
 
 * 设置亮度请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -964,7 +937,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -975,9 +948,7 @@ ChangePowerState请求
 ```    
 
 * 设置亮度响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -1003,12 +974,11 @@ ChangePowerState请求
       }
     }
 ```
+
 * 按步长设置亮度请求
     
     正数表示增加，负数表示减少.
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -1019,7 +989,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1030,9 +1000,7 @@ ChangePowerState请求
 ```
 
 * 按步长设置亮度响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -1067,8 +1035,6 @@ ChangePowerState请求
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1079,7 +1045,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1088,10 +1054,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1117,6 +1082,7 @@ ChangePowerState请求
       }
     }
 ```
+
 <span style="color:#ccc">3.12</span>温控器控制
 
     控制可以调节温度的设备
@@ -1127,8 +1093,6 @@ ChangePowerState请求
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1139,7 +1103,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1151,10 +1115,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1188,8 +1151,6 @@ ChangePowerState请求
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1200,7 +1161,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1212,10 +1173,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1250,8 +1210,6 @@ ChangePowerState请求
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1262,7 +1220,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1271,10 +1229,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1300,12 +1257,11 @@ ChangePowerState请求
       }
     }
 ```
+
 * 固定步长温度控制
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1316,7 +1272,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1325,10 +1281,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1354,13 +1309,12 @@ ChangePowerState请求
       }
     }
 ```
+
 * 模式控制
 
 
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -1371,7 +1325,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -1380,10 +1334,9 @@ ChangePowerState请求
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -1408,20 +1361,17 @@ ChangePowerState请求
         }
       }
     }
-```    
+```
+
 具体支持的模式列表，请参考`智能家居接口属性参考表`
 
-
 <span style="color:#ccc">3.13</span>温度感知
-
 
     查询温度
     接口名称：DNA.TemperatureSensor
 
     请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -1432,7 +1382,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1441,9 +1391,7 @@ ChangePowerState请求
 ```
 
     响应
-```    
-   
-
+```
         {
           "context": {
             "properties": [
@@ -1475,8 +1423,8 @@ ChangePowerState请求
           }
         }
 ```
-<span style="color:#ccc">3.14</span>湿度感知
 
+<span style="color:#ccc">3.14</span>湿度感知
 
     查询湿度
     接口名称：DNA.HumiditySensor
@@ -1493,7 +1441,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1503,8 +1451,6 @@ ChangePowerState请求
 
     响应
 ```
-   
-
         {
           "context": {
             "properties": [
@@ -1536,17 +1482,14 @@ ChangePowerState请求
           }
         }
 ```
-<span style="color:#ccc">3.15</span>PM2.5感知
 
+<span style="color:#ccc">3.15</span>PM2.5感知
 
     查询PM2.5
     接口名称：DNA.PM2_5Sensor
 
     请求
 ```
-   
-   
-
     {
       "directive": {
         "header": {
@@ -1557,7 +1500,7 @@ ChangePowerState请求
         },
         "endpoint": {
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -1567,8 +1510,6 @@ ChangePowerState请求
 
     响应
 ```
-   
-
         {
           "context": {
             "properties": [
@@ -1600,12 +1541,11 @@ ChangePowerState请求
           }
         }
 ```
+
 <span style="color:#ccc">3.16</span>状态查询
 
     请求
 ```
-       
-
         {
           "directive": {
             "header": {
@@ -1616,7 +1556,7 @@ ChangePowerState请求
             },
             "endpoint": {
               "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	      "devicePairedInfo":devicePairedInfo,
               "cookie": {},
             },
             "payload": {
@@ -1624,10 +1564,9 @@ ChangePowerState请求
           }
         }
 ```
+
     响应:
 ```
-   
-
         {
           "context": {
             "properties": [
@@ -1671,7 +1610,7 @@ valueName                        值名称
 
 如果是查询一个endpoint的全部状态, namespace需要填DNA.
 
-如果是查询单个属性，则填如对应属性的接口名称。
+如果是查询单个属性，则填入对应属性的接口名称。
 
 
 
@@ -1690,8 +1629,6 @@ valueName                        值名称
 
     上报格式:
 ```
-   
-
         {
           "context": {
             "properties": []
@@ -1704,12 +1641,9 @@ valueName                        值名称
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001",
-			  "devicePairedInfo":{"did":"","pid":""},
+	      "devicePairedInfo":devicePairedInfo,
+              "cookie": {}
             },
             "payload": {
               "reportType":"STATE_CHANGE",
@@ -1761,8 +1695,6 @@ cause字段用来描述设备状态变化的原因。
 
     响应
   ```  
-   
-
         {
           "context": {},
           "event": {
@@ -1773,10 +1705,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -1798,10 +1726,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -1814,6 +1738,7 @@ cause字段用来描述设备状态变化的原因。
             }
           }
 ```
+
 <span style="color:#ccc">3.19</span>场景控制
 
 控制场景
@@ -1824,7 +1749,6 @@ cause字段用来描述设备状态变化的原因。
 
 请求例子
 ```   
-
     {
       "directive": {
         "header": {
@@ -1834,25 +1758,18 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
         }
       }
     }
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -1864,10 +1781,6 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1875,11 +1788,11 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 取消场景请求
 
 请求例子
 ```   
-
     {
       "directive": {
         "header": {
@@ -1889,26 +1802,18 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
         }
       }
     }
-
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -1920,10 +1825,6 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -1939,9 +1840,6 @@ cause字段用来描述设备状态变化的原因。
 接口名称：DNA.MotionControl
 
 * 开始请求
-
-
-   
 ```
     {
       "directive": {
@@ -1952,12 +1850,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -1968,8 +1862,6 @@ cause字段用来描述设备状态变化的原因。
 ```
 
 * 暂停请求
-
-   
 ```
     {
       "directive": {
@@ -1980,12 +1872,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -1994,10 +1882,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 停止请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2007,12 +1894,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2021,11 +1904,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 响应
 ```
-
-   
-
     {
       "context": {
         "properties": [
@@ -2038,10 +1919,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2049,6 +1926,7 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 <span style="color:#ccc">3.21</span>文本控制
 
 通过文本字符串控制设备或者场景
@@ -2057,7 +1935,6 @@ cause字段用来描述设备状态变化的原因。
 
 请求例子
 ```   
-
     {
       "directive": {
         "header": {
@@ -2067,10 +1944,8 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
+          "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2081,11 +1956,9 @@ cause字段用来描述设备状态变化的原因。
     }
 
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -2097,10 +1970,7 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
+          "endpointId": "appliance-001"
         },
         "payload": {
             "answerText":"",
@@ -2128,7 +1998,6 @@ cause字段用来描述设备状态变化的原因。
 
 请求例子
 ```   
-
     {
       "directive": {
         "header": {
@@ -2138,10 +2007,8 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "",
-             "token": "some-access-token"
-          },
+          "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2150,13 +2017,10 @@ cause字段用来描述设备状态变化的原因。
         }
       }
     }
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
         "properties": []
@@ -2168,10 +2032,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2253,11 +2113,8 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2286,10 +2143,6 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2318,11 +2171,8 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2351,10 +2201,6 @@ cause字段用来描述设备状态变化的原因。
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2378,11 +2224,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
        "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2412,10 +2255,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2441,11 +2280,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2454,6 +2290,7 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 响应
 ```
     {
@@ -2474,10 +2311,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2488,7 +2321,6 @@ cause字段用来描述设备状态变化的原因。
 
 * 直接控制请求
 ```
-   
     {
       "directive": {
         "header": {
@@ -2498,14 +2330,9 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<some-access-token>"
-          },
-          "endpointId": "<appliance-001>",
-          "cookie": {
-             
-          }
+          "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
+          "cookie": {}
         },
         "payload": {
           "volume": 50
@@ -2534,10 +2361,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2545,6 +2368,7 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 静音控制请求
 ```
     {
@@ -2556,11 +2380,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "3"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<some-access-token>"
-          },
-          "endpointId": "<appliance-001>",
+          "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2569,6 +2390,7 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 响应
 ```
     {
@@ -2589,10 +2411,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2618,12 +2436,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2634,8 +2448,6 @@ cause字段用来描述设备状态变化的原因。
 ```
 
 * 暂停请求
-
-   
 ```
     {
       "directive": {
@@ -2646,12 +2458,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2660,10 +2468,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 继续请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2674,7 +2481,7 @@ cause字段用来描述设备状态变化的原因。
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2682,11 +2489,10 @@ cause字段用来描述设备状态变化的原因。
         }
       }
     }
- ```   
+ ```
+ 
 * 下一首请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2697,7 +2503,7 @@ cause字段用来描述设备状态变化的原因。
         },
         "endpoint": {
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2706,10 +2512,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 上一首请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2719,12 +2524,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2732,11 +2533,10 @@ cause字段用来描述设备状态变化的原因。
         }
       }
     }
-```    
+```
+
 * 快进请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2746,12 +2546,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2760,10 +2556,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 回放请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2773,12 +2568,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2787,10 +2578,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 响应
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -2803,10 +2593,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2832,11 +2618,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2845,10 +2628,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 响应:
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -2867,10 +2649,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2878,12 +2656,11 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 具体支持的列表，请参考`智能家居接口属性参考表 `
 
 * 步长调整风速请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2893,11 +2670,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -2906,10 +2680,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 响应:
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -2928,10 +2701,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -2948,9 +2717,6 @@ cause字段用来描述设备状态变化的原因。
 
 * 开启摆风请求
 ```
-
-   
-
     {
       "directive": {
         "header": {
@@ -2960,12 +2726,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -2977,8 +2739,6 @@ cause字段用来描述设备状态变化的原因。
 
 * 停止摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -2988,12 +2748,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3002,10 +2758,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 水平摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3015,12 +2770,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3032,8 +2783,6 @@ cause字段用来描述设备状态变化的原因。
 
 * 垂直摆风请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3043,12 +2792,8 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -3060,8 +2805,6 @@ cause字段用来描述设备状态变化的原因。
 
 响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3074,10 +2817,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3094,8 +2833,6 @@ cause字段用来描述设备状态变化的原因。
 
 * 请求
 ```
-   
-
     {
         "directive": {
             "header": {
@@ -3105,12 +2842,9 @@ cause字段用来描述设备状态变化的原因。
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
             },
             "endpoint": {
-                "scope": {
-                    "type": "BearerToken",
-                    "token": "some-access-token"
-                },
                 "endpointId": "appliance-001",
-                "cookie": {}
+	  	"devicePairedInfo":devicePairedInfo,
+          	"cookie": {}
             },
             "payload": {
                 "color": {
@@ -3122,9 +2856,9 @@ cause字段用来描述设备状态变化的原因。
         }
     }
 ```
+
 * 响应
 ```
-
     {
       "context": {
         "properties": [
@@ -3147,10 +2881,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3167,8 +2897,6 @@ cause字段用来描述设备状态变化的原因。
 
 请求
 ```
-   
-
     {
         "directive": {
             "header": {
@@ -3178,12 +2906,9 @@ cause字段用来描述设备状态变化的原因。
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
             },
             "endpoint": {
-                "scope": {
-                    "type": "BearerToken",
-                    "token": "some-access-token"
-                },
                 "endpointId": "appliance-001",
-                "cookie": {}
+	  	"devicePairedInfo":devicePairedInfo,
+          	"cookie": {}
             },
             "payload": {
                 "colorName": "RED"
@@ -3191,10 +2916,9 @@ cause字段用来描述设备状态变化的原因。
         }
     }
 ```
+
 响应
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3213,10 +2937,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3224,17 +2944,15 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
-<span style="color:#ccc">3.9</span>色温控制
 
+<span style="color:#ccc">3.9</span>色温控制
 
     控制设备的色温
     
     接口名称：DNA.ColorTempControl
 
 * 设置色温请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -3244,11 +2962,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3259,9 +2974,7 @@ cause字段用来描述设备状态变化的原因。
 ```    
 
 * 设置色温响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -3280,10 +2993,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3300,9 +3009,7 @@ cause字段用来描述设备状态变化的原因。
     接口名称：DNA.BrightnessControl
 
 * 设置亮度请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -3312,11 +3019,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3327,9 +3031,7 @@ cause字段用来描述设备状态变化的原因。
 ```    
 
 * 设置亮度响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -3348,10 +3050,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3359,12 +3057,11 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 按步长设置亮度请求
     
     正数表示增加，负数表示减少.
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -3374,11 +3071,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3389,9 +3083,7 @@ cause字段用来描述设备状态变化的原因。
 ```
 
 * 按步长设置亮度响应
-```    
-   
-
+```
     {
       "context": {
         "properties": [
@@ -3410,10 +3102,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3430,8 +3118,6 @@ cause字段用来描述设备状态变化的原因。
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3441,11 +3127,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3454,10 +3137,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3476,10 +3158,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3487,6 +3165,7 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 <span style="color:#ccc">3.12</span>温控器控制
 
     控制可以调节温度的设备
@@ -3497,8 +3176,6 @@ cause字段用来描述设备状态变化的原因。
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3508,11 +3185,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3524,10 +3198,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3549,10 +3222,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3565,8 +3234,6 @@ cause字段用来描述设备状态变化的原因。
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3576,11 +3243,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3592,10 +3256,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3617,10 +3280,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3634,8 +3293,6 @@ cause字段用来描述设备状态变化的原因。
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3645,11 +3302,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3658,10 +3312,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3680,10 +3333,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3691,12 +3340,11 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 固定步长温度控制
     
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3706,11 +3354,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3719,10 +3364,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3741,10 +3385,6 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -3752,13 +3392,12 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
 * 模式控制
 
 
     请求：
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -3768,11 +3407,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -3781,10 +3417,9 @@ cause字段用来描述设备状态变化的原因。
       }
     }
 ```
+
     响应：
 ```
-   
-
     {
       "context": {
         "properties": [
@@ -3803,17 +3438,14 @@ cause字段用来描述设备状态变化的原因。
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
         }
       }
     }
-```    
+```
+
 具体支持的模式列表，请参考`智能家居接口属性参考表`
 
 
@@ -3824,9 +3456,7 @@ cause字段用来描述设备状态变化的原因。
     接口名称：DNA.TemperatureSensor
 
     请求
-```    
-   
-
+```
     {
       "directive": {
         "header": {
@@ -3836,11 +3466,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -3849,9 +3476,7 @@ cause字段用来描述设备状态变化的原因。
 ```
 
     响应
-```    
-   
-
+```
         {
           "context": {
             "properties": [
@@ -3876,10 +3501,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -3887,6 +3508,7 @@ cause字段用来描述设备状态变化的原因。
           }
         }
 ```
+
 <span style="color:#ccc">3.14</span>湿度感知
 
 
@@ -3895,9 +3517,6 @@ cause字段用来描述设备状态变化的原因。
 
     请求
     ```
-   
-   
-
     {
       "directive": {
         "header": {
@@ -3907,11 +3526,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -3921,8 +3537,6 @@ cause字段用来描述设备状态变化的原因。
 
     响应
     ```
-   
-
         {
           "context": {
             "properties": [
@@ -3947,10 +3561,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -3958,6 +3568,7 @@ cause字段用来描述设备状态变化的原因。
           }
         }
 ```
+
 <span style="color:#ccc">3.15</span>PM2.5感知
 
 
@@ -3966,9 +3577,6 @@ cause字段用来描述设备状态变化的原因。
 
     请求
     ```
-   
-   
-
     {
       "directive": {
         "header": {
@@ -3978,11 +3586,8 @@ cause字段用来描述设备状态变化的原因。
           "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {}
@@ -3992,8 +3597,6 @@ cause字段用来描述设备状态变化的原因。
 
     响应
     ```
-   
-
         {
           "context": {
             "properties": [
@@ -4018,10 +3621,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -4029,12 +3628,11 @@ cause字段用来描述设备状态变化的原因。
           }
         }
 ```
+
 <span style="color:#ccc">3.16</span>状态查询
 
     请求
 ```
-       
-
         {
           "directive": {
             "header": {
@@ -4045,21 +3643,17 @@ cause字段用来描述设备状态变化的原因。
             },
             "endpoint": {
               "endpointId": "appliance-001",
-              "cookie": {},
-              "scope":{ 
-                    "type":"BearerToken",
-                    "token":"some-access-token"
-              }
+	      "devicePairedInfo":devicePairedInfo,
+              "cookie": {}
             },
             "payload": {
             }
           }
         }
 ```
+
     响应:
 ```
-   
-
         {
           "context": {
             "properties": [
@@ -4084,10 +3678,6 @@ cause字段用来描述设备状态变化的原因。
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -4123,8 +3713,6 @@ valueName                        值名称
 
     上报格式:
 ```
-   
-
         {
           "context": {
             "properties": []
@@ -4137,11 +3725,9 @@ valueName                        值名称
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
-              "endpointId": "appliance-001"
+              "endpointId": "appliance-001",
+	      "devicePairedInfo":devicePairedInfo,
+              "cookie": {}
             },
             "payload": {
               "reportType":"STATE_CHANGE",
@@ -4187,9 +3773,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
     接口名称：DNA.ErrorResponse
 
     响应
-  ```  
-   
-
+  ```
         {
           "context": {},
           "event": {
@@ -4200,10 +3784,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -4225,10 +3805,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
               "payloadVersion": "2"
             },
             "endpoint": {
-              "scope": {
-                "type": "BearerToken",
-                "token": "some-access-token"
-              },
               "endpointId": "appliance-001"
             },
             "payload": {
@@ -4241,6 +3817,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
             }
           }
 ```
+
 <span style="color:#ccc">3.19</span>场景控制
 
 控制场景
@@ -4250,8 +3827,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 * 执行场景请求
 
 请求例子
-```   
-
+```
     {
       "directive": {
         "header": {
@@ -4261,10 +3837,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
           "cookie": {}
         },
@@ -4274,11 +3846,9 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
     }
 
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -4290,10 +3860,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -4301,11 +3867,11 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
       }
     }
 ```
+
 * 取消场景请求
 
 请求例子
-```   
-
+```
     {
       "directive": {
         "header": {
@@ -4315,10 +3881,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
           "endpointId": "appliance-001",
           "cookie": {}
         },
@@ -4326,14 +3888,10 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         }
       }
     }
-
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -4345,10 +3903,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -4364,9 +3918,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 接口名称：DNA.MotionControl
 
 * 开始请求
-
-
-   
 ```
     {
       "directive": {
@@ -4377,12 +3928,8 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4393,8 +3940,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 ```
 
 * 暂停请求
-
-   
 ```
     {
       "directive": {
@@ -4405,12 +3950,8 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4419,10 +3960,9 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
       }
     }
 ```
+
 * 停止请求
 ```
-   
-
     {
       "directive": {
         "header": {
@@ -4432,12 +3972,8 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "<OAuth2认证后得到的access_token>"
-          },
           "endpointId": "<设备ID，发现时返回>",
-		  "devicePairedInfo":devicePairedInfo,
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {
           }
         },
@@ -4446,11 +3982,9 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
       }
     }
 ```
+
 响应
 ```
-
-   
-
     {
       "context": {
         "properties": [
@@ -4463,10 +3997,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -4474,6 +4004,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
       }
     }
 ```
+
 <span style="color:#ccc">3.21</span>文本控制
 
 通过文本字符串控制设备或者场景
@@ -4482,7 +4013,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 
 请求例子
 ```   
-
     {
       "directive": {
         "header": {
@@ -4492,10 +4022,8 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
+          "endpointId": "appliance-001",
+	  "devicePairedInfo":devicePairedInfo,
           "cookie": {}
         },
         "payload": {
@@ -4504,13 +4032,10 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         }
       }
     }
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
       },
@@ -4522,11 +4047,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
-        },
         "payload": {
             "answerText":"",
             "endpoints":[
@@ -4552,8 +4072,7 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 接口名称: DNA.CustomizedRemoteControl
 
 请求例子
-```   
-
+```
     {
       "directive": {
         "header": {
@@ -4563,13 +4082,9 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
            "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
         },
         "endpoint": {
-          "scope": {
-             "type": "BearerToken",
-             "token": "some-access-token"
-          },
-		  "endpointId": "appliance-001",
-		  "devicePairedInfo":devicePairedInfo,
-          "cookie": {}
+		"endpointId": "appliance-001",
+		"devicePairedInfo":devicePairedInfo,
+          	"cookie": {}
         },
         "payload": {
           "text":"",
@@ -4577,13 +4092,10 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
         }
       }
     }
-
 ```
+
 响应例子
 ```
-
-   
-
     {
       "context": {
         "properties": []
@@ -4595,10 +4107,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
           "payloadVersion": "2"
         },
         "endpoint": {
-          "scope": {
-            "type": "BearerToken",
-            "token": "some-access-token"
-          },
           "endpointId": "appliance-001"
         },
         "payload": {
@@ -4616,7 +4124,6 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
 3.actions中的能力对应面板中保存的按键。
 
 举例如下:
-   
 ```
       {
                 "endpointId":"3008880577263935437",
@@ -4667,5 +4174,4 @@ cause字段用来描述设备状态变化的原因，如果是设备列表变化
                 ],
                 "additional":null
       }
-
 ```
