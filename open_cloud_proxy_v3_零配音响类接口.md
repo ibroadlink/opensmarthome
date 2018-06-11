@@ -1,17 +1,6 @@
 ## 云端接口参考
 <span style="color:#ccc">2</span> 云端接口
 
-云端需要提供如下接口：
-1. 云端身份校验接口,设备通过校验云端对challenge的签名,可以判断云端是否合法
-2. 设备身份校验接口（设备身份声明）,云端通过校验设备对challenge的签名,可以判断设备是否合法
-3. 产品详情查询（设备注册）,通过这个接口可以获取产品的详情
-4. 无用户信息的设备控制接口
-5. 设备联网后事件上报
-6. 特殊产品接口（RM）
-
-第三方需要做如下事情：
-1. 向音箱平台给BroadLink分配vendorid和OUI
-
 <span style="color:#ccc">2.1</span> 云端身份校验接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
@@ -27,7 +16,8 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": "xxxx",//从设备中获取
+                "deviceId":""
+                "deviceInfo":"xxxxx"//设备信息透传字段
                 "challenge":""
             }
         }
@@ -46,10 +36,11 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": "xxxxxx",
+              "deviceId":"",
+              "deviceInfo":"xxxxx",
               "challenge":"",
               "signature":""
-          },
+          }
         }
       }
 }
@@ -72,7 +63,8 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": "xxxxx",
+                "deviceId":""
+                "deviceInfo":"xxxxx",
                 "signature":""
             }
         }
@@ -91,9 +83,10 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": "xxxxxxx",
+              "deviceId":"",
+              "deviceInfo":"xxxx",
               "shareKey":""
-          },
+          }
         }
       }
 }
@@ -114,16 +107,13 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
         },
         "payload": {
             "device": {
-              "devicePairedInfo": {
-                "mac":"",
-                "did":"",
-                "pid":"",
-                "cookie":base64(cookieStu) 具体见透传字段//为空返回设备描述//不为空返回设备落库信息
-              }      
-            },
-            "scope": {
-            },
-            "options": {
+                deviceId:"xxx",
+                deviceInfo:"xxx",
+                tokenInfo:"xxx",//设备配网生成的token
+                cookie:{
+                    "subDeviceInfo":subDeviceInfo //虚拟面板设备携带，其他设备不传，结构见透传字段
+                }//设备额外信息，如面板、子设备信息,一般是h5或者sdk返回。
+                     
             }
         }
     }
@@ -139,11 +129,6 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
             "interfaceVersion": "2",
             "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
         },
-        "payload": {
-          "device": {
-              "devicePairedInfo": devicePairedInfo,
-          },
-        },
         "endpoints": [
             {
                 "endpointId": "appliance-001"，//设备的,一般为sdk设备发现的did
@@ -155,7 +140,6 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
                 "displayCategories": [
                     "LIGHT"
                 ],
-                "devicePairedInfo":{},
                 "cookie": {
                     "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回",
                     "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回",
@@ -191,7 +175,7 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 }
 
 ```
-<span style="color:#ccc">2.4</span> 设备控制接口（具体功能参数暂未列出）
+<span style="color:#ccc">2.4</span> 设备控制接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
@@ -204,14 +188,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"//请求id,返回信息中会保持一致。
     },
     "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo": {
-        "did":"",      //设备的唯一ID
-        "pid":"",      //设备产品类型ID
-        "mac":"",      //设备MAC地址
-        "cookie":""    //第三方云端存储的设备信息cookie
-      }
       "endpointId": "Some-Device-ID",//注册返回
       "cookie": {}//注册返回的cookie,第三方云端透传
     },
@@ -238,8 +214,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
-      "scope": {
-      },
       "endpointId": "appliance-001"//控制设备
     },
     "payload": {
@@ -247,57 +221,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
   }
 }
 ```
-
-<span style="color:#ccc">2.4.1</span> 设备自定义功能控制
-
-```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
-请求：
-{
-  "directive": {
-    "header": {
-       "namespace": "DNA.CustomFunctionControl",
-       "name": "IrcodeFunction",
-       "interfaceVersion": "2",
-       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
-    },
-    "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo": {
-        "did":"",      //设备的唯一ID
-        "pid":"",      //设备产品类型ID
-        "mac":"",      //设备MAC地址
-        "cookie":""    //第三方云端存储的设备信息cookie
-        }
-      "endpointId": "Some-Device-ID",//注册返回
-      "cookie": {}//注册返回的cookie,第三方云端透传
-    },
-    "payload": {
-        "function":"up"//对应红外码的function
-    }
-  }
-}
-响应：
-{
-  "context": {},
-  "event": {
-    "header": {
-       "namespace": "DNA.CustomFunctionControl",
-       "name": "IrcodeFunction",//成功返回标识
-       "interfaceVersion": "2",
-       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
-    },
-    "endpoint": {
-      "endpointId": "appliance-001"//控制设备
-    },
-    "payload": {
-    }
-  }
-}
-```
-
-
 
 <span style="color:#ccc">2.5</span> 设备在线状态查询接口
 
@@ -314,14 +237,6 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoints": [{
-      "scope": {
-      },
-      ”devicePairedInfo": {
-             "did":"",      //设备的唯一ID
-             "pid":"",      //设备产品类型ID
-             "mac":"",      //设备MAC地址
-             "cookie":""    //设备Pair获取Cookie
-           }，
       "endpointId": "Some-Device-ID",
       "cookie": {}
     }],
@@ -342,8 +257,6 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoints": [{
-      "scope": {
-      },
       "endpointId": "appliance-001",
       "state": "online"
     }],
@@ -366,12 +279,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      ”devicePairedInfo": {
-             "did":"",      //设备的唯一ID
-             "pid":"",      //设备产品类型ID
-             "mac":"",      //设备MAC地址
-             "cookie":""    //设备Pair获取Cookie
-           }，
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -406,8 +313,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
-      "scope": {
-      },
       "endpointId": "appliance-001",
     },
     "payload": {
@@ -416,50 +321,9 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.7</span> 数据上报接口
+<span style="color:#ccc">2.6</span> 透传指令控制接口
 ```
-POST https://(YOURSERVER)/(YOURURL)POST https://(YOURSERVER)/(YOURURL)
-上报结构：
-{
-    "context":{
-
-    },
-    "event":{
-        "header":{
-            "namespace":"DNA",
-            "name":"ChangeReport",
-            "payloadVersion":"3",
-            "messageId":"t4fd-4lykcmmciliwujxg"
-        },
-        "endpoint":{
-            "endpointId":"00000000000000000000780f77747894"
-        },
-        "payload":{
-            "change":{
-                "cause":{
-                    "type":"PHYSICAL_INTERACTION"
-                },
-                "properties":[
-                    {
-                        "namespace":"DNA.EndpointHealth",
-                        "name":"connectivity",
-                        "value":{
-                            "value":"OK"
-                        },
-                        "timeOfSample":"2018-06-11T16:59:36.52Z",
-                        "uncertaintyInMilliseconds":0
-                    }
-                ]
-            }
-        }
-    }
-}
-
-
-```
-<span style="color:#ccc">2.8</span> 透传红码接口
-```
-POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -470,7 +334,6 @@ POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -498,106 +361,21 @@ POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
     },
     "endpoint": {
       "endpointId": "appliance-001"//控制设备
+      cookie:{}
     },
     "payload": {
+	     "dnaCodeResp":"b445sdfafad112224sdfsdfad"//设备返回数据
     }
   }
 }
 
 ```
-<span style="color:#ccc">2.9</span> RM学习功能接口
 
-<span style="color:#ccc">2.9.1</span> RM进入学习功能接口
-```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
-请求：
-{
-  "directive": {
-    "header": {
-       "namespace": "DNA.RMControl",
-       "name": "StudyIrCode",
-       "interfaceVersion": "2",
-       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
-    },
-    "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo":devicePairedInfo,
-      "endpointId": "Some-Device-ID",
-      "cookie": {}
-    },
-    "payload": {
-    }
-  }
-}
-响应：
-{
-  "context": {
-  },
-  "event": {
-    "header": {
-       "namespace": "DNA.RMControl",
-       "name": "Response",//成功返回标识
-       "interfaceVersion": "2",
-       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
-    },
-    "endpoint": {
-      "endpointId": "appliance-001"//控制设备
-    },
-    "payload": {
-    }
-  }
-}
-```
+<span style="color:#ccc">2.7</span> 设备管理相关
 
-<span style="color:#ccc">2.9.2</span> RM查询红码学习结果
-
+<span style="color:#ccc">2.7.1</span> OTA查询版本接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
-请求：
-{
-  "directive": {
-    "header": {
-       "namespace": "DNA.RMControl",
-       "name": "GetIrCode",
-       "interfaceVersion": "2",
-       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
-    },
-    "endpoint": {
-      ”devicePairedInfo":devicePairedInfo,
-      "endpointId": "Some-Device-ID",
-      "cookie": {}
-    },
-    "payload": {
-    }
-  }
-}
-
-响应：
-{
-    "context":{
-    },
-    "event":{
-        "header":{
-            "namespace":"DNA.RMControl",
-            "messageId":"30d2cd1a-ce4f-4542-aa5e-04bd0a6492d5",//新生成
-            "name":"GetIrCode",
-            "interfaceVersion":"2"
-        },
-        "endpoint":{
-            "endpointId":"appliance-001"
-        },
-        "payload":{
-            "code":"2600ac000700059e0001158911121211"
-        }
-    }
-}
-```
-<span style="color:#ccc">2.10</span> 设备管理相关
-
-<span style="color:#ccc">2.10.1</span> OTA查询版本接口
-```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
 {
   "directive": {
@@ -608,7 +386,6 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -629,6 +406,8 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
+      "scope": {
+      },
       "endpointId": "appliance-001"//控制设备
     },
     "payload": {
@@ -639,9 +418,9 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 ```
 
 
-<span style="color:#ccc">2.10.2</span> OTA版本升级
+<span style="color:#ccc">2.7.2</span> OTA版本升级
 ```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
 {
   "directive": {
@@ -652,9 +431,6 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -690,10 +466,9 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.10.3</span> 远程复位接口
-
+<span style="color:#ccc">2.7.3</span> 远程复位接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 请求：
 {
   "directive": {
@@ -704,9 +479,6 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
-      ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -735,9 +507,48 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
   }
 }
 ```
-<span style="color:#ccc">2.11</span> 接口错误响应
 
-<span style="color:#ccc">2.11.1</span> 错误响应格式
+<span style="color:#ccc">2.7.3</span> 数据上报结构
+```
+设备上线连接后向音响服务端上报
+{
+    "context":{
+
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA",
+            "name":"ChangeReport",
+            "payloadVersion":"3",
+            "messageId":"yfwf-pnpu4uc5ax7xcxia"
+        },
+        "endpoint":{
+            "deviceId":""
+        },
+        "payload":{
+            "change":{
+                "cause":{
+                    "type":"PHYSICAL_INTERACTION"
+                },
+                "properties":[
+                    {
+                        "namespace":"DNA.EndpointHealth",
+                        "name":"connectivity",
+                        "value":{
+                            "value":"UNREACHABLE"
+                        },
+                        "timeOfSample":"2018-05-14T23:24:04.52Z",
+                        "uncertaintyInMilliseconds":0
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+<span style="color:#ccc">2.8</span> 接口错误响应
+
+<span style="color:#ccc">2.8.1</span> 错误响应格式
 
 ```
 返回消息中
@@ -754,6 +565,10 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
       "payloadVersion": "2"
     },
     "endpoint": {
+      "scope": {
+        "type": "BearerToken",
+        "token": "some-access-token"
+      },
       "endpointId": "appliance-001"
     },
     "payload": {
@@ -763,22 +578,22 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
   }
 ```
 
-<span style="color:#ccc">2.11.2</span> 错误码表
+<span style="color:#ccc">2.7.2</span> 错误码表
 
-| 字段                 | 说明         | 备注                         |
-| -------------------- | ------------ | ---------------------------- |
-| ENDPOINT_UNREACHABLE | 设备离线     |                              |
-| NO_SUCH_ENDPOINT     | 设备不存在   |                              |
-| INVALID_REQ          | 请求格式不对 |                              |
-| DEVICE_RESET         | 设备已经复位 |                              |
-| INVALID_DIRECTIVE    | 指令错误     |                              |
-| INVALID_ACCESSTOKEN  | token失效    |                              |
-| INVALID_SIGNATURE    | 签名非法     |                              |
-| INTERNAL_ERROR       | 其他错误     |                              |
-| VALUE_OUT_OF_RANGE   | 值越界       |                              |
-| FUNCTION_NOT_SUPPORT | 功能不支持   |                              |
-| UNDERSTAND_FAILURE   | 无法理解     |                              |
-| SERVICE_UNAVAILABLE  | 服务器不可用 | 当服务处理超时或者异常时返回 |
+|字段 | 说明 | 备注|
+|------------ | ------------- | -------------|
+|ENDPOINT_UNREACHABLE | 设备离线 |	 
+|NO_SUCH_ENDPOINT |设备不存在|	 
+|INVALID_REQ	|请求格式不对|	 
+|DEVICE_RESET|	设备已经复位	 |
+|INVALID_DIRECTIVE|	指令错误	 |
+|INVALID_ACCESSTOKEN|	token失效	|
+|INVALID_SIGNATURE	|签名非法|	 
+|INTERNAL_ERROR	|其他错误	 |
+|VALUE_OUT_OF_RANGE|	值越界	 |
+|FUNCTION_NOT_SUPPORT|	功能不支持|	 
+|UNDERSTAND_FAILURE	|无法理解	 |
+|SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
 
 <span style="color:#ccc">3</span> 控制接口参考表
 Go to [控制接口参考表](message_table.md).
