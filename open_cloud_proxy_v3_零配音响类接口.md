@@ -141,10 +141,10 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
                     "LIGHT"
                 ],
                 "cookie": {
-                    "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回",
-                    "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回",
-                    "extraDetail3": "某些设备可能会用到这个cookie，需要在控制时原样返回",
-                    "extraDetail4": "某些设备可能会用到这个cookie，需要在控制时原样返回"
+                    "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
+                    "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
+                    "extraDetail3": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
+                    "extraDetail4": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回"
                 },
                 "capabilities": [
                     {
@@ -222,7 +222,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.5</span> 设备在线状态查询接口
+<span style="color:#ccc">2.5</span> 设备在线状态查询接口（暂无使用）
 
 每次最多查询32个设备的在线状态
 ```
@@ -363,9 +363,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
       "endpointId": "appliance-001"//控制设备
       cookie:{}
     },
-    "payload": {
-	     "dnaCodeResp":"b445sdfafad112224sdfsdfad"//设备返回数据
-    }
+    "payload": {}
   }
 }
 
