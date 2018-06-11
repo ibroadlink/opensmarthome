@@ -536,7 +536,7 @@ POST https://YOURURL
                         "namespace":"DNA.EndpointHealth",
                         "name":"connectivity",
                         "value":{
-                            "value":"UNREACHABLE"
+                            "value":"OK" or "UNREACHABLE"
                         },
                         "timeOfSample":"2018-05-14T23:24:04.52Z",
                         "uncertaintyInMilliseconds":0
