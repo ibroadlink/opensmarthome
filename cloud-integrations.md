@@ -185,8 +185,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"//请求id,返回信息中会保持一致。
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo": {
         "did":"",      //设备的唯一ID
         "pid":"",      //设备产品类型ID
@@ -219,8 +217,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
-      "scope": {
-      },
       "endpointId": "appliance-001"//控制设备
     },
     "payload": {
@@ -242,8 +238,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo": {
         "did":"",      //设备的唯一ID
         "pid":"",      //设备产品类型ID
@@ -292,8 +286,6 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoints": [{
-      "scope": {
-      },
       ”devicePairedInfo": {
              "did":"",      //设备的唯一ID
              "pid":"",      //设备产品类型ID
@@ -382,8 +374,6 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
-      "scope": {
-      },
       "endpointId": "appliance-001",
     },
     "payload": {
