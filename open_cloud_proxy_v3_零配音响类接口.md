@@ -534,7 +534,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
                         "namespace":"DNA.EndpointHealth",
                         "name":"connectivity",
                         "value":{
-                            "value":"UNREACHABLE"
+                            "value":"OK"
                         },
                         "timeOfSample":"2018-05-14T23:24:04.52Z",
                         "uncertaintyInMilliseconds":0
