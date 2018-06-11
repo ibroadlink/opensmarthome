@@ -17,16 +17,8 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 	},
         "payload": {
             "device": {
-                "deviceInfo": {
-                  "mac":"",
-                  "did":"",
-                  "devicetype":""
-                  },
-                "challenge":""
-            },
-            "scope": {
-            },
-            "options": {
+                "deviceInfo": "xxxxx",//设备返回的信息
+                "challenge":"xxxxxxx"
             }
         }
     }
@@ -44,14 +36,10 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": {
-                "mac":"",
-                "did":"",
-                "devicetype":""
-              },
+              "deviceInfo": "xxxxxxxx",
               "challenge":"",
               "signature":""
-          },
+          }
         }
       }
 }
@@ -73,16 +61,8 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": {
-                  "mac":"",
-                  "did":"",
-                  "devicetype":""
-                  },
+                "deviceInfo": "xxxxxxxx",
                 "signature":""
-            },
-            "scope": {
-            },
-            "options": {
             }
         }
     }
@@ -100,13 +80,9 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": {
-                "mac":"",
-                "did":"",
-                "devicetype":""
-              },
+              "deviceInfo": "xxxxxxxx",
               "shareKey":""
-          },
+          }
         }
       }
 }
