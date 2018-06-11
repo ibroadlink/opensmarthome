@@ -1,10 +1,6 @@
 ## 云端接口参考
 <span style="color:#ccc">2</span> 云端接口
 
-整体流程:
-
-![整体框图](img/bigpicture.png "整体框图")
-
 <span style="color:#ccc">2.1</span> 云端身份校验接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
