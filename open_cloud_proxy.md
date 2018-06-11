@@ -1,16 +1,13 @@
-## 云端接口参考
-<span style="color:#ccc">2</span> 云端接口
-
-我方云端提供如下接口：
-1. 云端身份校验接口,设备通过校验云端对challenge的签名,可以判断云端是否合法（零配设备使用）
-2. 设备身份校验接口（设备身份声明）,云端通过校验设备对challenge的签名,可以判断设备是否合法（零配设备使用）
+云端需要提供如下接口：
+1. 云端身份校验接口,设备通过校验云端对challenge的签名,可以判断云端是否合法
+2. 设备身份校验接口（设备身份声明）,云端通过校验设备对challenge的签名,可以判断设备是否合法
 3. 产品详情查询（设备注册）,通过这个接口可以获取产品的详情
 4. 无用户信息的设备控制接口
 5. 设备联网后事件上报
 6. 特殊产品接口（RM）
 
 第三方需要做如下事情：
-使用集成我们app sdk或者零配等方式，能够使设备配网，并且获取到设备信息（devicePairedInfo），调用云端接口进行设备控制
+1. 向音箱平台给BroadLink分配vendorid和OUI
 
 <span style="color:#ccc">2.1</span> 云端身份校验接口
 ```
@@ -27,11 +24,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": {
-                  "mac":"",
-                  "did":"",
-                  "devicetype":""
-                  },
+                "deviceInfo": "xxxx",//从设备中获取
                 "challenge":""
             }
         }
@@ -50,11 +43,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": {
-                "mac":"",
-                "did":"",
-                "devicetype":""
-              },
+              "deviceInfo": "xxxxxx",
               "challenge":"",
               "signature":""
           },
@@ -80,11 +69,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
             "device": {
-                "deviceInfo": {
-                  "mac":"",
-                  "did":"",
-                  "devicetype":""
-                  },
+                "deviceInfo": "xxxxx",
                 "signature":""
             }
         }
@@ -103,11 +88,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
         },
         "payload": {
           "device": {
-              "deviceInfo": {
-                "mac":"",
-                "did":"",
-                "devicetype":""
-              },
+              "deviceInfo": "xxxxxxx",
               "shareKey":""
           },
         }
@@ -136,6 +117,10 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
                 "pid":"",
                 "cookie":base64(cookieStu) 具体见透传字段//为空返回设备描述//不为空返回设备落库信息
               }      
+            },
+            "scope": {
+            },
+            "options": {
             }
         }
     }
