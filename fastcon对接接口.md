@@ -508,8 +508,10 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.7.3</span> 数据上报结构
+<span style="color:#ccc">2.8</span> 数据上报结构
 ```
+POST https://YOURURL
+上报结构：
 {
     "context":{
 
@@ -545,9 +547,9 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
     }
 }
 ```
-<span style="color:#ccc">2.8</span> 红码学习相关接口
+<span style="color:#ccc">2.9</span> 红码学习相关接口
 
-<span style="color:#ccc">2.8.1</span> RM进入学习功能接口
+<span style="color:#ccc">2.9.1</span> RM进入学习功能接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 请求：
@@ -587,7 +589,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.8.2</span> RM查询红码学习结果
+<span style="color:#ccc">2.9.2</span> RM查询红码学习结果
 
 ```
 POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
@@ -630,9 +632,9 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.9</span> 接口错误响应
+<span style="color:#ccc">2.10</span> 接口错误响应
 
-<span style="color:#ccc">2.9.1</span> 错误响应格式
+<span style="color:#ccc">2.10.1</span> 错误响应格式
 
 ```
 返回消息中
@@ -662,7 +664,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
   }
 ```
 
-<span style="color:#ccc">2.7.2</span> 错误码表
+<span style="color:#ccc">2.10.2</span> 错误码表
 
 |字段 | 说明 | 备注|
 |------------ | ------------- | -------------|
