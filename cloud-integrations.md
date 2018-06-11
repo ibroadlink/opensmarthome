@@ -320,8 +320,6 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoints": [{
-      "scope": {
-      },
       "endpointId": "appliance-001",
       "state": "online"
     }],
@@ -396,7 +394,42 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 <span style="color:#ccc">2.5</span> 数据上报接口
 ```
-POST https://(YOURSERVER)/eventchannel?PARAMS1=xx&PARAMS2=yy
+POST https://(YOURSERVER)/(YOURURL)
+上报结构：
+{
+    "context":{
+
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA",
+            "name":"ChangeReport",
+            "payloadVersion":"3",
+            "messageId":"t4fd-4lykcmmciliwujxg"
+        },
+        "endpoint":{
+            "endpointId":"00000000000000000000780f77747894"
+        },
+        "payload":{
+            "change":{
+                "cause":{
+                    "type":"PHYSICAL_INTERACTION"
+                },
+                "properties":[
+                    {
+                        "namespace":"DNA.EndpointHealth",
+                        "name":"connectivity",
+                        "value":{
+                            "value":"OK"
+                        },
+                        "timeOfSample":"2018-06-11T16:59:36.52Z",
+                        "uncertaintyInMilliseconds":0
+                    }
+                ]
+            }
+        }
+    }
+}
 
 ```
 
