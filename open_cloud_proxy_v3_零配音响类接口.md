@@ -141,10 +141,10 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
                     "LIGHT"
                 ],
                 "cookie": {
-                    "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
-                    "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
-                    "extraDetail3": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回",
-                    "extraDetail4": "某些设备可能会用到这个cookie，需要在控制时原样返回，若注册时不包含tokenInfo，则不反回"
+                    "extraDetail1": "某些设备可能会用到这个cookie，需要在控制时原样返回",
+                    "extraDetail2": "某些设备可能会用到这个cookie，需要在控制时原样返回",
+                    "extraDetail3": "某些设备可能会用到这个cookie，需要在控制时原样返回",
+                    "extraDetail4": "某些设备可能会用到这个cookie，需要在控制时原样返回"
                 },
                 "capabilities": [
                     {
@@ -222,9 +222,9 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.5</span> 设备在线状态查询接口（暂无使用）
+<span style="color:#ccc">2.5</span> 设备在线状态查询接口
 
-每次最多查询32个设备的在线状态
+每次最多查询32个设备的在线状态（暂无使用）
 ```
 POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
 请求：
@@ -321,7 +321,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 }
 ```
 
-<span style="color:#ccc">2.6</span> 透传指令控制接口
+<span style="color:#ccc">2.6</span> 透传红码控制接口
 ```
 POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
@@ -363,11 +363,13 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
       "endpointId": "appliance-001"//控制设备
       cookie:{}
     },
-    "payload": {}
+    "payload": {
+    }
   }
 }
 
 ```
+
 
 <span style="color:#ccc">2.7</span> 设备管理相关
 
@@ -508,7 +510,6 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 
 <span style="color:#ccc">2.7.3</span> 数据上报结构
 ```
-设备上线连接后向音响服务端上报
 {
     "context":{
 
@@ -544,9 +545,94 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
     }
 }
 ```
-<span style="color:#ccc">2.8</span> 接口错误响应
+<span style="color:#ccc">2.8</span> 红码学习相关接口
 
-<span style="color:#ccc">2.8.1</span> 错误响应格式
+<span style="color:#ccc">2.8.1</span> RM进入学习功能接口
+```
+POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "StudyIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+<span style="color:#ccc">2.8.2</span> RM查询红码学习结果
+
+```
+POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "GetIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+
+响应：
+{
+    "context":{
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA.RMControl",
+            "messageId":"30d2cd1a-ce4f-4542-aa5e-04bd0a6492d5",//新生成
+            "name":"GetIrCode",
+            "interfaceVersion":"2"
+        },
+        "endpoint":{
+            "endpointId":"appliance-001"
+        },
+        "payload":{
+            "code":"2600ac000700059e0001158911121211"
+        }
+    }
+}
+```
+
+<span style="color:#ccc">2.9</span> 接口错误响应
+
+<span style="color:#ccc">2.9.1</span> 错误响应格式
 
 ```
 返回消息中
