@@ -215,6 +215,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
     },
     "endpoint": {
       "endpointId": "appliance-001"//控制设备
+       "cookie": {}//注册返回的cookie,第三方云端透传
     },
     "payload": {
     }
@@ -237,8 +238,7 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoints": [{
-      "endpointId": "Some-Device-ID",
-      "cookie": {}
+      "endpointId": "Some-Device-ID"
     }],
     "payload": {
     }
@@ -323,7 +323,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 <span style="color:#ccc">2.6</span> 透传指令控制接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
 请求：
 {
   "directive": {
@@ -334,6 +334,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
+      ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
     },
@@ -361,10 +362,8 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
     },
     "endpoint": {
       "endpointId": "appliance-001"//控制设备
-      cookie:{}
     },
     "payload": {
-	     "dnaCodeResp":"b445sdfafad112224sdfsdfad"//设备返回数据
     }
   }
 }
