@@ -47,7 +47,7 @@ Android 平台使用 `NetworkAPI.getInstanceBLNetwork(Content content)` 进行 S
 
 SDK 支持 `iOS6.0` 以后版本, 支持 `armv7/armv7s/arm64/i386/x86_64` 指令集。
 
-iOS 平台使用 `[[NetworkAPI alloc] init]` 进行 SDK 实例化，SDK 为单例模式。
+iOS 平台使用 `[[BLSmartHomeAPI sharedDNASDK] sdkInit:[param toJSONString]]` 进行 SDK 实例化，SDK 为单例模式。
 
 <span style="color:#ccc">1.4</span> SDK初始化
 
