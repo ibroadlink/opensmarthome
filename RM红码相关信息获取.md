@@ -305,16 +305,7 @@ body:
                 "name": "getircode",
                 "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
                 "interfaceVersion": "2"
-            },
-            "endpoint": {
-                "scope": {
-                    "type": "",
-                    "token": "some-access-token"
-                },
-                "endpointId": "appliance-001",//暂时不需要
-                "devicePairedInfo": devicePairedInfo,
-                "cookie": {}
-            },
+            }
             "payload": {
                 "devtypeid":0，
                 "brandid":1,//(电视、空调)
@@ -326,22 +317,13 @@ body:
                     
 return:
 {
-    "context":{
-
-    },
+    "context":{},
     "event":{
         "header":{
             "namespace":"DNA.IrcodeInfo",
             "name":"Response",
             "interfaceVersion":"2",
             "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
-        },
-        "endpoint":{
-            "scope":{
-                "type":"",
-                "token":"some-access-token"
-            },
-            "endpointId":"appliance-001"
         },
         "payload":{
             "ircode":[
@@ -363,6 +345,43 @@ return:
     }
 }
 ```
+7. rm空调红码一键匹配
+
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "matchircode",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "payload": {
+               "dnacode":"xxxxx"
+            }
+        }
+    }
+                    
+return:
+{
+    "context":{},
+    "event":{
+        "header":{
+            "namespace":"DNA.IrcodeInfo",
+            "name":"Response",
+            "interfaceVersion":"2",
+            "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
+        },
+        "payload":{
+            "retdata":[
+                {
+                    "irid":int,
+                    "name":"xxxx"
+                }
+            ]
+        }
+    }
+}
 
 # 品类以及对应功能参考表
 0. JSON格式
