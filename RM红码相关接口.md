@@ -186,7 +186,7 @@ return:
 
 4. 获取地区列表
 
-   ```json
+   ```
    URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
    body:
        {
@@ -234,10 +234,11 @@ return:
            }
          }
        }
-
+   
+   
    ```
 
-   ​
+   
 
 5. 获取运营商列表
 
@@ -286,7 +287,7 @@ return:
            }
          }
        }
-
+   
    ```
 
    ​
@@ -347,41 +348,82 @@ return:
 ```
 7. rm空调红码一键匹配
 
-body:
-    {
-        "directive": {
-            "header": {
-                "namespace": "DNA.IrcodeInfo",
-                "name": "matchircode",
-                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
-                "interfaceVersion": "2"
-            },
-            "payload": {
-               "dnacode":"xxxxx"
-            }
-        }
-    }
-                    
-return:
-{
-    "context":{},
-    "event":{
-        "header":{
-            "namespace":"DNA.IrcodeInfo",
-            "name":"Response",
-            "interfaceVersion":"2",
-            "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
-        },
-        "payload":{
-            "retdata":[
-                {
-                    "irid":int,
-                    "name":"xxxx"
-                }
-            ]
-        }
-    }
-}
+   ```
+   body:
+   
+       {
+   
+           "directive": {
+   
+               "header": {
+   
+                   "namespace": "DNA.IrcodeInfo",
+   
+                   "name": "matchircode",
+   
+                   "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+   
+                   "interfaceVersion": "2"
+   
+               },
+   
+               "payload": {
+   
+                  "dnacode":"xxxxx"
+   
+               }
+   
+           }
+   
+       }
+   
+                       
+   
+   return:
+   
+   {
+   
+       "context":{},
+   
+       "event":{
+   
+           "header":{
+   
+               "namespace":"DNA.IrcodeInfo",
+   
+               "name":"Response",
+   
+               "interfaceVersion":"2",
+   
+               "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
+   
+           },
+   
+           "payload":{
+   
+               "retdata":[
+   
+                   {
+   
+                       "irid":int,
+   
+                       "name":"xxxx"
+   
+                   }
+   
+               ]
+   
+           }
+   
+       }
+   
+   }
+   
+   ```
+
+   
+
+
 
 # 品类以及对应功能参考表
 0. JSON格式
