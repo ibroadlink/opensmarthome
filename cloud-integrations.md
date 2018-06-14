@@ -175,9 +175,13 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 <span style="color:#ccc">2.2</span> 设备控制接口
 
 控制数据中包含几个部分，分别说明如下：
-设备的唯一标识："endpointId": "Some-Device-ID"，//注册返回。对于没有注册流程的第三方，也可直接使用sdk返回的devicePairedInfo中的did。
-设备的属性："devicePairedInfo":{}，//注册时返回。对于没有注册流程的第三方，也可由sdk返回中得到。
-控制字段：由namespace,name和payload确定，
+
+设备的唯一标识："endpointId": "Some-Device-ID"，//注册返回。对于没有注册流程的第三方，也可直接使用sdk返回的devicePairedInfo中的did；
+
+设备的属性："devicePairedInfo":{}，//注册时返回。对于没有注册流程的第三方，也可由sdk返回中得到；
+
+控制字段：由namespace,name和payload确定；
+
 消息唯一标识：messageId。
 
 ```
