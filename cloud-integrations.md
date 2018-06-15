@@ -497,8 +497,6 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
@@ -628,8 +626,6 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
@@ -679,8 +675,6 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
@@ -769,8 +763,6 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
        "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
     },
     "endpoint": {
-      "scope": {
-      },
       ”devicePairedInfo":devicePairedInfo,
       "endpointId": "Some-Device-ID",
       "cookie": {}
@@ -798,8 +790,6 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
        "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     },
     "endpoint": {
-      "scope": {
-      },
       "endpointId": "appliance-001"//控制设备
     },
     "payload": {
