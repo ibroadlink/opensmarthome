@@ -752,7 +752,7 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 
 <span style="color:#ccc">2.10</span> 透传指令控制接口(预发布)
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
