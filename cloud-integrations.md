@@ -768,8 +768,8 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
       "cookie": {}
     },
     "payload": {
-        "data":"b445sdfafad112224sdf"
-    }
+        "data":"b445sdfafad112224sdf" //base64编码
+    }
   }
 }
 响应：
