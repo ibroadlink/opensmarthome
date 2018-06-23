@@ -3,7 +3,7 @@
 
 整体流程:
 
-![整体框图](img/bigpicture.png "整体框图")
+![整体框图](img/cloudmesg.png "整体框图")
 
 <span style="color:#ccc">2.1</span> 云端身份校验接口
 ```
