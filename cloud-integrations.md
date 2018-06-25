@@ -734,23 +734,23 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 ```
 <span style="color:#ccc">2.9.2</span> 错误码表
 
-|字段 | 说明 | 备注|
-|------------ | ------------- | -------------|
-|ENDPOINT_UNREACHABLE | 设备离线 |	 
-|NO_SUCH_ENDPOINT |设备不存在|	 
-|INVALID_REQ	|请求格式不对|	 
-|DEVICE_RESET|	设备已经复位	 |
-|INVALID_DIRECTIVE|	指令错误	 |
-|INVALID_ACCESSTOKEN|	token失效	| 
-|INVALID_SIGNATURE	|签名非法|	 
-|INTERNAL_ERROR	|其他错误	 |
-|VALUE_OUT_OF_RANGE|	值越界	 |
-|FUNCTION_NOT_SUPPORT|	功能不支持|	 
-|UNDERSTAND_FAILURE	|无法理解	 |
-|SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
+| 字段                   | 说明      | 备注             |
+| -------------------- | ------- | -------------- |
+| ENDPOINT_UNREACHABLE | 设备离线    |                |
+| NO_SUCH_ENDPOINT     | 设备不存在   |                |
+| INVALID_REQ          | 请求格式不对  |                |
+| DEVICE_RESET         | 设备已经复位  |                |
+| INVALID_DIRECTIVE    | 指令错误    |                |
+| INVALID_ACCESSTOKEN  | token失效 |                |
+| INVALID_SIGNATURE    | 签名非法    |                |
+| INTERNAL_ERROR       | 其他错误    |                |
+| VALUE_OUT_OF_RANGE   | 值越界     |                |
+| FUNCTION_NOT_SUPPORT | 功能不支持   |                |
+| UNDERSTAND_FAILURE   | 无法理解    |                |
+| SERVICE_UNAVAILABLE  | 服务器不可用  | 当服务处理超时或者异常时返回 |
 
 
-<span style="color:#ccc">2.10</span> 透传指令控制接口(预发布)
+<span style="color:#ccc">2.10.1</span> 透传指令控制接口(预发布)
 ```
 POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 请求：
@@ -799,6 +799,31 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 }
 ```
 
+<span style="color:#ccc">2.10.2</span> 透传指令上报接口(预发布)
+
+```
+POST https://(YOURSERVER)/(YOURURL)
+上报结构：
+{
+    "context":{},
+    "event":{
+        "header":{
+            "namespace":"DNA.TransmissionReport",
+            "name":"ChangeReport",
+            "payloadVersion":"3",
+            "messageId":"t4fd-4lykcmmciliwujxg"
+        },
+        "endpoint":{
+            "endpointId":"00000000000000000000780f77747894"
+        },
+        "payload":{
+            "data":"xxxxx"//（base64加密）透传设备上报的数据
+        }
+    }
+}
+```
+
+
 
 <span style="color:#ccc">3</span> 控制接口参考表
 Go to [控制接口参考表](message_table.md).
@@ -808,6 +833,5 @@ Go to [接口属性参考表](attribute_table.md).
 
 <span style="color:#ccc">5</span> 品类参考表
 Go to [品类参考表](category_table.md).
-
 
 
