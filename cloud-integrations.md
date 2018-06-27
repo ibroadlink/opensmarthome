@@ -809,7 +809,7 @@ POST https://(YOURSERVER)/(YOURURL)
     "event":{
         "header":{
             "namespace":"DNA.TransmissionReport",
-            "name":"DNA",
+            "name":"Report",
             "payloadVersion":"3",
             "messageId":"t4fd-4lykcmmciliwujxg"
         },
