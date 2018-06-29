@@ -748,6 +748,8 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 | FUNCTION_NOT_SUPPORT | 功能不支持   |                |
 | UNDERSTAND_FAILURE   | 无法理解    |                |
 | SERVICE_UNAVAILABLE  | 服务器不可用  | 当服务处理超时或者异常时返回 |
+| NETWOEK_TIME_OUT  | 网络超时  | 控制设备超时返回 |
+
 
 
 <span style="color:#ccc">2.10.1</span> 透传指令控制接口(预发布)
