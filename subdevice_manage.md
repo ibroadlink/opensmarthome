@@ -41,6 +41,14 @@
 }
 ```
 
+cookie 是Base64编码的字符串，解码之后的信息是如下所示的json字符串：
+
+```json
+{
+    "device":devicePairedInfo , //网关设备信息 devicePairedInfo
+}
+```
+
 ## 操作流程
 
 使用SDK对网关设备进行子设备管理，是基于二进制命令透传实现的，具体操作请配合Demo进行。
