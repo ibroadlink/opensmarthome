@@ -35,8 +35,6 @@
 {
     "did":"xxxx",       //子设备唯一id
     "pid":"xxxx",       //子设备产品id
-    "name":"xxxx",      //子设备名称
-    "flag":0,           //子设备是否被添加标记位
     "cookie":"xxxxxxxx" //子设备所属网关信息
 }
 ```
