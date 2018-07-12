@@ -98,7 +98,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 
 <span style="color:#ccc">2.3</span> 设备注册接口
 ```
-POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
+POST https://(OpenproxyURL)//openproxy/v3/register?license=(license)
 
 请求：
 {
@@ -181,7 +181,7 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 ```
 <span style="color:#ccc">2.4</span> 设备控制接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -230,7 +230,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 每次最多查询32个设备的在线状态（暂无使用）
 ```
-POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/querystate?license=(license)
 请求：
 {
   "directive": {
@@ -272,7 +272,7 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
 
 <span style="color:#ccc">2.6</span> 设备状态查询接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -327,7 +327,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 <span style="color:#ccc">2.6</span> 透传红码控制接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -379,7 +379,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 <span style="color:#ccc">2.7.1</span> OTA查询版本接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -424,7 +424,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 
 <span style="color:#ccc">2.7.2</span> OTA版本升级
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -472,7 +472,7 @@ POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
 
 <span style="color:#ccc">2.7.3</span> 远程复位接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/control?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -596,7 +596,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 <span style="color:#ccc">2.9.2</span> RM查询红码学习结果
 
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -684,6 +684,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 |FUNCTION_NOT_SUPPORT|	功能不支持|	 
 |UNDERSTAND_FAILURE	|无法理解	 |
 |SERVICE_UNAVAILABLE	|服务器不可用	|当服务处理超时或者异常时返回|
+| NETWOEK_TIME_OUT  | 网络超时  | 控制设备超时返回 |
 
 <span style="color:#ccc">3</span> 控制接口参考表
 Go to [控制接口参考表](message_table.md).
