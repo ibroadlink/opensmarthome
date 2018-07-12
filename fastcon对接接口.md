@@ -228,7 +228,7 @@ POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 
 <span style="color:#ccc">2.5</span> 设备在线状态查询接口
 
-每次最多查询32个设备的在线状态（暂无使用）
+每次最多查询32个设备的在线状态（
 ```
 POST https://(OpenproxyURL)/openproxy/v3/querystate?license=(license)
 请求：
