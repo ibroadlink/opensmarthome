@@ -420,7 +420,51 @@ return:
    }
    
    ```
+8.获取频道列表
 
+```
+URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
+
+header: 
+body:
+    {
+        "directive": {
+            "header": {
+                "namespace": "DNA.IrcodeInfo",
+                "name": "getchannel",
+                "messageId": "1bd5d003-31b9-476f-ad03-71d471922820",
+                "interfaceVersion": "2"
+            },
+            "payload": {
+                "locateid":0,
+                "providerid":1,
+            }
+        }
+    }
+                    
+return:
+{
+    "context":{},
+    "event":{
+        "header":{
+            "namespace":"DNA.IrcodeInfo",
+            "name":"Response",
+            "interfaceVersion":"2",
+            "messageId":"5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4"
+        },
+        "payload":{
+            "tvchannel":[
+                {
+                    "name":"xxx",
+                    "famousstatus":0,
+                    "channelid":11,
+                    "serialnum":123
+                }
+            ]
+        }
+    }
+}
+```
    
 
 
