@@ -528,13 +528,14 @@ POST https://YOURURL
             "messageId":"yfwf-pnpu4uc5ax7xcxia"
         },
         "endpoint":{
-            "endpointId":"34ea34183f4a",
-            "devtype":"32016"
+            "endpointId":"34ea34183f4a", //设备唯一标识
+            "devtype":"32016" //标示设备型号
         },
         "payload":{
             "change":{
                 "cause":{
-                    "type":"PHYSICAL_INTERACTION"
+                    "type":"PHYSICAL_INTERACTION",
+		     "msgtype":10005  //10001:上线；10003：下线；10005：fastcon配网上线
                 },
                 "properties":[
                     {
@@ -545,7 +546,7 @@ POST https://YOURURL
                         },
                         "timeOfSample":"2018-05-14T23:24:04.52Z",
                         "uncertaintyInMilliseconds":0
-                    }
+                    }     //离线在线
                 ]
             }
         }
