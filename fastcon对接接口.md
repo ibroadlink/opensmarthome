@@ -528,7 +528,8 @@ POST https://YOURURL
             "messageId":"yfwf-pnpu4uc5ax7xcxia"
         },
         "endpoint":{
-            "deviceId":""
+            "endpointId":"34ea34183f4a",
+            "devtype":"32016"
         },
         "payload":{
             "change":{
