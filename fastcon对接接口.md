@@ -113,7 +113,7 @@ POST https://(OpenproxyURL)//openproxy/v3/register?license=(license)
             "device": {
                 deviceId:"xxx",
                 deviceInfo:"xxx",
-                tokenInfo:"xxx",//设备配网生成的token
+                tokenInfo:"xxx",//设备配网生成的token 可以为空，为空时返回基本播放信息，非空时返回设备落库信息
                 cookie:{
                     "subDeviceInfo":subDeviceInfo //虚拟面板设备携带，其他设备不传，结构见透传字段
                 }//设备额外信息，如面板、子设备信息,一般是h5或者sdk返回。
