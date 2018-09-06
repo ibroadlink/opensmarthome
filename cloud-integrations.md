@@ -1,10 +1,12 @@
 ## 云端接口参考
 
+URL 中的 lid 可从kit后台申请
+
 <span style="color:#ccc">1</span> 接口校验和安全方式方式
 
 <span style="color:#ccc">1.1</span> 云端身份校验接口(使用博联app sdk配网忽略)
 ```
-POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/identity?license=(license)
 
 请求：
 {
@@ -48,7 +50,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 
 <span style="color:#ccc">1.2</span> 设备身份声明接口(使用博联app sdk配网忽略)
 ```
-POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/identity?license=(license)
 
 请求：
 {
@@ -91,7 +93,7 @@ POST https://(OpenproxyURL)/openproxy/v2/identity?license=(license)
 
 <span style="color:#ccc">2.1</span> 设备注册接口
 ```
-POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com//openproxy/v2/openregister?license=(license)
 
 请求：
 {
@@ -185,7 +187,7 @@ POST https://(OpenproxyURL)//openproxy/v2/openregister?license=(license)
 消息唯一标识：messageId。
 
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -238,7 +240,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 <span style="color:#ccc">2.2.1</span> 设备自定义功能控制
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -286,7 +288,7 @@ POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
 
 每次最多查询32个设备的在线状态
 ```
-POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/querystate?license=(license)
 请求：
 {
   "directive": {
@@ -334,7 +336,7 @@ POST https://(OpenproxyURL)/openproxy/v2/querystate?license=(license)
 
 <span style="color:#ccc">2.4</span> 设备状态查询接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
@@ -436,7 +438,7 @@ POST https://(YOURSERVER)/(YOURURL)
 
 <span style="color:#ccc">2.6</span> 透传红码接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/freecontrol?license=(license)
 请求：
 {
   "directive": {
@@ -486,7 +488,7 @@ POST https://(OpenproxyURL)/openproxy/v2/freecontrol?license=(license)
 
 <span style="color:#ccc">2.7.1</span> RM进入学习功能接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/learncode?license=(license)
 请求：
 {
   "directive": {
@@ -527,7 +529,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 
 <span style="color:#ccc">2.7.2</span> RM查询红码学习结果
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/learncode?license=(license)
 请求：
 {
   "directive": {
@@ -572,7 +574,7 @@ POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
 
 <span style="color:#ccc">2.8.1</span> OTA查询版本接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -615,7 +617,7 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 
 <span style="color:#ccc">2.8.2</span> OTA版本升级
 ```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -664,7 +666,7 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 
 <span style="color:#ccc">2.8.3</span> 远程复位接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/firmware?license=(license)
 请求：
 {
   "directive": {
@@ -754,7 +756,7 @@ POST https://(OpenproxyURL)/openproxy/v2/firmware?license=(license)
 
 <span style="color:#ccc">2.10.1</span> 透传指令控制接口(预发布)
 ```
-POST https://(OpenproxyURL)/openproxy/v2/opencontrol?license=(license)
+POST https://[lid]opensmarthome.ibroadlink.com/openproxy/v2/opencontrol?license=(license)
 请求：
 {
   "directive": {
