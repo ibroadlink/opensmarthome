@@ -1,5 +1,7 @@
 ## 云端接口参考
 
+URL 中的 lid 可从kit后台申请
+
 <span style="color:#ccc">1</span> 接口校验和安全方式方式
 
 <span style="color:#ccc">1.1</span> 云端身份校验接口(使用博联app sdk配网忽略)
