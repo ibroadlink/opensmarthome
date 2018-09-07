@@ -117,8 +117,15 @@ POST https://(OpenproxyURL)//openproxy/v3/register?license=(license)
                 cookie:{
                     "subDeviceInfo":subDeviceInfo //虚拟面板设备携带，其他设备不传，结构见透传字段
                 }//设备额外信息，如面板、子设备信息,一般是h5或者sdk返回。
-                     
-            }
+            }，
+	    "scope"：{
+         	"type": "BearerToken",
+         	"token": "Yodst_WQRoS6LHyNyMLSZA",       //第三方oauth2.0 accesstoken
+		"openId":"xxxxxxxx",                     //第三方userid
+		"companyId":"xxxxx",                     //从DNAkit申请
+		"platform":"xxxxxxx",                    //平台名称，从对接人员获取
+		"nickname":"xxxxxxx"                     //第三方用户昵称
+      		}          //需要添加设备到智慧星时使用此字段（智慧星通过第三方账号登录可以看到此设备）
         }
     }
 }
