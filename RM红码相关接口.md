@@ -215,30 +215,28 @@ return:
            },
            "payload": {
              "subareainfo": [
-               {
-                   "locateid": 2405,
-                   "levelid": 3,
-                   "name": "朝阳市",
-                   "isleaf": 1,
-                   "status": "正常",
-                   "initials": "C"
-               },
-               {         
-                   "locateid": 150,
-                   "levelid": 3,
-                   "name": "本溪市",
-                   "isleaf": 1,
-                   "status": "正常",
-                   "initials": "B"
-               } ]
+               {
+                   "locateid": 2405,
+                   "levelid": 3,
+                   "name": "朝阳市",
+                   "isleaf": 1,
+                   "status": "正常",
+                   "initials": "C"
+               },
+               {         
+                   "locateid": 150,
+                   "levelid": 3,
+                   "name": "本溪市",
+                   "isleaf": 1,
+                   "status": "正常",
+                   "initials": "B"
+               } ]
            }
          }
        }
    
    
    ```
-
-   
 
 5. 获取运营商列表
 
@@ -270,27 +268,25 @@ return:
               "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
            },
            "payload": {
-           "providerinfo": [
-               {
-                   "providerid": 72,
-                   "providername": "通用",
-                   "providernameen": "",
-                   "initials": "T"
-               },
-               {
-                   "providerid": 179,
-                   "providername": "大连广电",
-                   "providernameen": "",
-                   "initials": "D"
-               }
-           ]
+           "providerinfo": [
+               {
+                   "providerid": 72,
+                   "providername": "通用",
+                   "providernameen": "",
+                   "initials": "T"
+               },
+               {
+                   "providerid": 179,
+                   "providername": "大连广电",
+                   "providernameen": "",
+                   "initials": "D"
+               }
+           ]
            }
          }
        }
    
    ```
-
-   ​
 
 6. 获取红码列表
 
@@ -420,7 +416,7 @@ return:
    }
    
    ```
-8.获取频道列表
+   8.获取频道列表
 
 ```
 URL: https://xxxbizopenplatform.ibroadlink.com/openproxy/v2/ircode/info
@@ -465,7 +461,140 @@ return:
     }
 }
 ```
-   
+
+9.红码透传接口（测试红码匹配时使用）
+
+```
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.FreeControl",
+       "name": "DnaCodeControl",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+        "dnaCode":"b445sdfafad112224sdf"
+    }
+  }
+}
+响应：
+{
+  "context": {//控制参数
+    "properties": [ {
+       "namespace": "DNA.FreeControl",
+       "name": "DnaCodeControl",
+       "value": "b445sdfafad112224sdf",//控制指令
+       "timeOfSample": "2017-02-03T16:20:50.52Z",
+    } ]
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.FreeControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+      cookie:{}
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+10.RM进入学习状态接口
+
+```
+POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "StudyIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+响应：
+{
+  "context": {
+  },
+  "event": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "Response",//成功返回标识
+       "interfaceVersion": "2",
+       "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    },
+    "endpoint": {
+      "endpointId": "appliance-001"//控制设备
+    },
+    "payload": {
+    }
+  }
+}
+```
+
+11.RM查询红码学习结果
+
+```
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
+请求：
+{
+  "directive": {
+    "header": {
+       "namespace": "DNA.RMControl",
+       "name": "GetIrCode",
+       "interfaceVersion": "2",
+       "messageId": "1bd5d003-31b9-476f-ad03-71d471922820"
+    },
+    "endpoint": {
+      "endpointId": "Some-Device-ID",
+      "cookie": {}
+    },
+    "payload": {
+    }
+  }
+}
+
+响应：
+{
+    "context":{
+    },
+    "event":{
+        "header":{
+            "namespace":"DNA.RMControl",
+            "messageId":"30d2cd1a-ce4f-4542-aa5e-04bd0a6492d5",//新生成
+            "name":"GetIrCode",
+            "interfaceVersion":"2"
+        },
+        "endpoint":{
+            "endpointId":"appliance-001"
+        },
+        "payload":{
+            "code":"2600ac000700059e0001158911121211"
+        }
+    }
+}
+```
+
 
 
 
