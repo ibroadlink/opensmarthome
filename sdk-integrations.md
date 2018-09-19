@@ -201,6 +201,30 @@ return:
 
 ```
 
+```
+public String devicePair(String action, String params)
+
+action: CloudPair
+params:
+            {
+                    "deviceInfo": deviceInfo    // Probe搜索到的设备信息
+                    "timeout": 3000,            // 配对超时实际，默认3000ms
+                    "version": 1                // 配对版本
+            }
+
+return:
+            {
+                    "status":0,
+                    "msg": "success", 
+                    "payload": {
+                        "deviceToken":"xxxxxxx",
+                        "deviceInfo":"xxxxxxx",
+                        "deviceid":"xxxxxx"
+                    }
+            }
+
+```
+
 <span style="color:#ccc">1.9</span> 设备控制API
 ```
 public String deviceControl(String action, String params)
