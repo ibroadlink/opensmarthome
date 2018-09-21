@@ -514,7 +514,7 @@ POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 10.RM进入学习状态接口
 
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
