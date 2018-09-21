@@ -564,7 +564,7 @@ POST https://YOURURL
 
 <span style="color:#ccc">2.9.1</span> RM进入学习功能接口
 ```
-POST https://(OpenproxyURL)/openproxy/v2/learncode?license=(license)
+POST https://(OpenproxyURL)/openproxy/v3/opencontrol?license=(license)
 请求：
 {
   "directive": {
